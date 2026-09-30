@@ -7,7 +7,37 @@
     <title>Đăng Ký Tài Khoản Sinh Viên - UniStore</title>
     <meta name="description"
         content="Tạo tài khoản sinh viên để nhận đặc quyền giảm giá và giao hàng KTX miễn phí tại UniStore." />
-    <link rel="stylesheet" href="/src/index.css" />
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+  /* ============================================================
+     HƯỚNG DẪN DÀNH CHO SINH VIÊN: TÙY CHỈNH MÀU SẮC CHỦ ĐẠO (THEME)
+     Để đổi màu chủ đạo cho toàn bộ hệ thống (ví dụ xanh dương Indigo, 
+     xanh ngọc Emerald, cam san hô hay đỏ Bordeaux), sinh viên chỉ cần
+     thay đổi bảng mã màu HEX của --color-primary-* dưới đây:
+     ============================================================ */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+  --color-primary-950: #1e1b4b;
+}
+
+/* Font và reset phụ trợ */
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased font-sans;
+  }
+}
+    </style>
+        <link rel="stylesheet" href="/src/index.css" />
 </head>
 
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
