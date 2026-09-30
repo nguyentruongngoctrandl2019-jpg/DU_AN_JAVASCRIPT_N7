@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập Sinh Viên - UniStore</title>
+    <meta name="description" content="Đăng nhập tài khoản sinh viên UniStore để nhận ưu đãi thiết bị công nghệ." />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+    <!-- Checkbox mở/đóng Sidebar trên Mobile -->
+    <input type="checkbox" id="sidebar-toggle" class="peer hidden" />
+    <label for="sidebar-toggle" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-40 hidden peer-checked:block lg:hidden cursor-pointer" aria-hidden="true"></label>
+
+    <div class="flex flex-1">
+      <!-- SIDEBAR ĐỒNG NHẤT -->
+      <aside class="fixed top-0 bottom-0 left-0 z-50 w-72 bg-white border-r border-slate-200 flex flex-col justify-between transition-transform duration-200 ease-in-out -translate-x-full peer-checked:translate-x-0 lg:translate-x-0 lg:static lg:h-screen lg:sticky shrink-0 overflow-y-auto">
+        <div>
+          <!-- Header của Sidebar -->
+          <div class="p-5 border-b border-slate-100 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center text-white shadow-sm shadow-primary-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <div>
+                <span class="text-lg font-bold text-slate-900 tracking-tight block">UniStore</span>
+                <span class="text-[11px] font-medium text-slate-500 block">Đồ án Web · Sinh viên</span>
+              </div>
+            </a>
+            <label for="sidebar-toggle" class="lg:hidden p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </label>
+          </div>
+
+          <!-- Nhóm Menu Điều Hướng -->
+          <div class="px-3 py-4">
+            <p class="px-3 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Điều Hướng Cửa Hàng</p>
+            <nav class="space-y-1">
+              <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <span>Trang Chủ</span>
+              </a>
+
+              <a href="products.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+                <span>Sản Phẩm Sinh Viên</span>
+              </a>
+
+              <a href="product-detail.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span>Chi Tiết Sản Phẩm</span>
+              </a>
+
+              <a href="cart.html" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
+                <div class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <span>Giỏ Hàng</span>
+                </div>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-primary-100 text-primary-700">3</span>
+              </a>
+
+              <a href="checkout.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span>Thanh Toán Đơn</span>
+              </a>
+            </nav>
+
+            <p class="px-3 mt-6 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Tài Khoản Sinh Viên</p>
+            <nav class="space-y-1">
+              <a href="profile.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span>Hồ Sơ Cá Nhân</span>
+              </a>
+
+              <!-- Đang active: Đăng Nhập -->
+              <a href="login.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-50 text-primary-700 font-semibold text-sm transition-colors border-r-4 border-primary-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                </svg>
+                <span>Đăng Nhập</span>
+              </a>
+
+              <a href="register.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                </svg>
+                <span>Đăng Ký Tài Khoản</span>
+              </a>
+            </nav>
+          </div>
+
+          <div class="mx-3 mt-2 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="flex items-center gap-2 mb-1 text-xs font-semibold text-slate-700">
+              <span class="w-2.5 h-2.5 rounded-full bg-primary-600"></span>
+              <span>Theme Linh Hoạt</span>
+            </div>
+            <p class="text-[11px] text-slate-500">
+              Màu chủ đạo Tailwind tùy biến tại <code class="font-mono text-primary-700">src/index.css</code>.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-3 border-t border-slate-100 bg-slate-50/50">
+          <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-lg bg-primary-100 text-primary-700 font-bold text-xs flex items-center justify-center shrink-0">
+                SV
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-semibold text-slate-900 truncate">Chưa đăng nhập</p>
+                <p class="text-[10px] text-slate-500 truncate">Khách vãng lai</p>
+              </div>
+            </div>
+            <a href="login.html" class="p-1.5 text-primary-600 hover:text-primary-800 transition-colors" title="Đăng nhập">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- KHU VỰC NỘI DUNG CHÍNH -->
+      <div class="flex-1 flex flex-col min-w-0">
+        <!-- Header -->
+        <header class="bg-white border-b border-slate-200 sticky top-0 z-30 px-4 lg:px-8 py-3.5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <label for="sidebar-toggle" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </label>
+            <div>
+              <h1 class="text-lg lg:text-xl font-bold text-slate-900">Đăng Nhập Hệ Thống</h1>
+              <p class="text-xs text-slate-500">Đăng nhập tài khoản sinh viên để nhận mã giảm giá & freeship</p>
+            </div>
+          </div>
+
+          <a href="register.html" class="text-xs font-semibold text-primary-600 hover:underline">
+            Chưa có tài khoản? Đăng ký
+          </a>
+        </header>
+
+        <!-- Main Body: Form Đăng nhập giữa màn hình -->
+        <main class="flex-1 flex items-center justify-center p-4 lg:p-8">
+          <div class="w-full max-w-md bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
+            <div class="text-center space-y-2">
+              <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mx-auto mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h2 class="text-xl font-extrabold text-slate-900">Chào Mừng Sinh Viên Quay Lại</h2>
+              <p class="text-xs text-slate-500">Nhập email hoặc mã số sinh viên để tiếp tục mua sắm</p>
+            </div>
+
+            <!-- Form thuần HTML chuyển hướng đến profile.html -->
+            <form action="profile.html" method="get" class="space-y-4 text-xs">
+              <div class="space-y-1">
+                <label for="login-email" class="font-semibold text-slate-700">Email trường học hoặc Tên đăng nhập *</label>
+                <div class="relative">
+                  <input type="text" id="login-email" required value="an.nguyen24@sinhvien.edu.vn" placeholder="VD: an.nguyen@sinhvien.edu.vn" class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <div class="flex items-center justify-between">
+                  <label for="login-password" class="font-semibold text-slate-700">Mật khẩu *</label>
+                  <a href="login.html" class="text-primary-600 hover:underline text-[11px]">Quên mật khẩu?</a>
+                </div>
+                <div class="relative">
+                  <input type="password" id="login-password" required value="123456" class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-1">
+                <label class="flex items-center gap-2 text-slate-600 cursor-pointer">
+                  <input type="checkbox" checked class="rounded text-primary-600 focus:ring-primary-500" />
+                  <span>Ghi nhớ phiên đăng nhập</span>
+                </label>
+              </div>
+
+              <button type="submit" class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl transition-colors shadow-xs cursor-pointer text-sm">
+                Đăng Nhập Tài Khoản
+              </button>
+            </form>
+
+            <!-- Đường phân cách -->
+            <div class="relative flex items-center justify-center">
+              <div class="border-t border-slate-200 w-full"></div>
+              <span class="bg-white px-3 text-[11px] text-slate-400 uppercase tracking-wider relative">Hoặc</span>
+            </div>
+
+            <!-- Nút đăng nhập Google Sinh Viên -->
+            <a href="profile.html" class="w-full py-2.5 px-3 border border-slate-200 hover:bg-slate-50 rounded-xl text-center font-semibold text-xs text-slate-700 flex items-center justify-center gap-2.5 transition-colors">
+              <svg class="w-4 h-4" viewBox="0 0 24 24">
+                <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.3 9 5 12 5z"/>
+                <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z"/>
+                <path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15s.7 5.3 1.9 7.7l3.7-2.9z"/>
+                <path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.3-6.4-5.2L1.9 16c1.8 3.7 5.6 6.3 10.1 6.3z"/>
+              </svg>
+              <span>Đăng nhập qua Google Mail Sinh Viên (.edu.vn)</span>
+            </a>
+
+            <!-- Gợi ý tài khoản demo sinh viên -->
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-[11px] text-slate-500 space-y-1">
+              <p class="font-semibold text-slate-700">Tài khoản demo kiểm thử giao diện:</p>
+              <p>Email: <code class="font-mono text-primary-700">an.nguyen24@sinhvien.edu.vn</code></p>
+              <p>Mật khẩu: <code class="font-mono text-primary-700">123456</code> (Bấm "Đăng Nhập" để xem Hồ Sơ)</p>
+            </div>
+
+            <!-- Footer link -->
+            <p class="text-center text-xs text-slate-500">
+              Chưa có tài khoản sinh viên? 
+              <a href="register.html" class="text-primary-700 font-bold hover:underline">Đăng ký ngay tại đây</a>
+            </p>
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-slate-200 mt-auto py-6 px-4 lg:px-8 text-center text-xs text-slate-500">
+          <p class="font-medium text-slate-700">Đồ án môn Thiết Kế Giao Diện Web · Ngành Công Nghệ Thông Tin</p>
+          <p class="mt-1">Xây dựng bằng <strong class="text-slate-800">HTML5 thuần & Tailwind CSS</strong> · Không JavaScript · Sidebar đồng nhất.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

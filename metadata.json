@@ -1,0 +1,6 @@
+{
+  "name": "UniStore - Giao Diện E-Commerce HTML & Tailwind",
+  "description": "Giao diện website thương mại điện tử đa trang thuần HTML và Tailwind CSS cho sinh viên, không JavaScript, chuẩn responsive với sidebar đồng nhất.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
