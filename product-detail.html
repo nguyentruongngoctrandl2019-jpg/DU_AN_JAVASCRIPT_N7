@@ -1,557 +1,892 @@
 <!doctype html>
 <html lang="vi">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chi Tiết Sản Phẩm - Logitech MX Master 3S - UniStore</title>
-    <meta name="description"
-        content="Chi tiết chuột không dây công thái học Logitech MX Master 3S chính hãng ưu đãi sinh viên." />
+    <title>Chi Tiết Sản Phẩm - Logitech MX Master 3S</title>
+    <meta
+      name="description"
+      content="Chi tiết chuột không dây công thái học Logitech MX Master 3S chính hãng ưu đãi sinh viên."
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
 
     <style type="text/tailwindcss">
-        @theme {
-  /* ============================================================
+      @theme {
+        /* ============================================================
      HƯỚNG DẪN DÀNH CHO SINH VIÊN: TÙY CHỈNH MÀU SẮC CHỦ ĐẠO (THEME)
      Để đổi màu chủ đạo cho toàn bộ hệ thống (ví dụ xanh dương Indigo, 
      xanh ngọc Emerald, cam san hô hay đỏ Bordeaux), sinh viên chỉ cần
      thay đổi bảng mã màu HEX của --color-primary-* dưới đây:
      ============================================================ */
-  --color-primary-50: #eef2ff;
-  --color-primary-100: #e0e7ff;
-  --color-primary-200: #c7d2fe;
-  --color-primary-300: #a5b4fc;
-  --color-primary-400: #818cf8;
-  --color-primary-500: #6366f1;
-  --color-primary-600: #4f46e5;
-  --color-primary-700: #4338ca;
-  --color-primary-800: #3730a3;
-  --color-primary-900: #312e81;
-  --color-primary-950: #1e1b4b;
-}
+        --color-primary-50: #eef2ff;
+        --color-primary-100: #e0e7ff;
+        --color-primary-200: #c7d2fe;
+        --color-primary-300: #a5b4fc;
+        --color-primary-400: #818cf8;
+        --color-primary-500: #6366f1;
+        --color-primary-600: #4f46e5;
+        --color-primary-700: #4338ca;
+        --color-primary-800: #3730a3;
+        --color-primary-900: #312e81;
+        --color-primary-950: #1e1b4b;
+      }
 
-/* Font và reset phụ trợ */
-@layer base {
-  body {
-    @apply bg-slate-50 text-slate-800 antialiased font-sans;
-  }
-}
+      /* Font và reset phụ trợ */
+      @layer base {
+        body {
+          @apply bg-slate-50 text-slate-800 antialiased font-sans;
+        }
+      }
     </style>
-        <link rel="stylesheet" href="/src/index.css" />
-</head>
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
 
-<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+  <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
     <!-- Checkbox điều khiển mở/đóng Sidebar trên Mobile -->
     <input type="checkbox" id="sidebar-toggle" class="peer hidden" />
 
     <!-- Lớp nền mờ khi mở Sidebar trên Mobile -->
-    <label for="sidebar-toggle"
-        class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-40 hidden peer-checked:block lg:hidden cursor-pointer"
-        aria-hidden="true"></label>
+    <label
+      for="sidebar-toggle"
+      class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-40 hidden peer-checked:block lg:hidden cursor-pointer"
+      aria-hidden="true"
+    ></label>
 
     <div class="flex flex-1">
-        <!-- SIDEBAR ĐỒNG NHẤT -->
-        <aside
-            class="fixed top-0 bottom-0 left-0 z-50 w-72 bg-white border-r border-slate-200 flex flex-col justify-between transition-transform duration-200 ease-in-out -translate-x-full peer-checked:translate-x-0 lg:translate-x-0 lg:static lg:h-screen lg:sticky shrink-0 overflow-y-auto">
-            <div>
-                <!-- Header của Sidebar -->
-                <div class="p-5 border-b border-slate-100 flex items-center justify-between">
-                    <a href="index.html" class="flex items-center gap-3 group">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center text-white shadow-sm shadow-primary-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="text-lg font-bold text-slate-900 tracking-tight block">UniStore</span>
-                            <span class="text-[11px] font-medium text-slate-500 block">Đồ án Web · Sinh viên</span>
-                        </div>
-                    </a>
-                    <label for="sidebar-toggle"
-                        class="lg:hidden p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </label>
-                </div>
+      <!-- SIDEBAR ĐỒNG NHẤT -->
+      <aside
+        class="fixed top-0 bottom-0 left-0 z-50 w-72 bg-white border-r border-slate-200 flex flex-col justify-between transition-transform duration-200 ease-in-out -translate-x-full peer-checked:translate-x-0 lg:translate-x-0 lg:static lg:h-screen lg:sticky shrink-0 overflow-y-auto"
+      >
+        <div>
+          <!-- Header của Sidebar -->
+          <div
+            class="p-5 border-b border-slate-100 flex items-center justify-between"
+          >
+            <a href="index.html" class="flex items-center gap-3 group">
+              <div
+                class="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center text-white shadow-sm shadow-primary-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span
+                  class="text-lg font-bold text-slate-900 tracking-tight block"
+                  >CT TECH STORE</span
+                >
+                <span class="text-[11px] font-medium text-slate-500 block"
+                  >Phụ kiện công nghệ dành cho sinh viên</span
+                >
+              </div>
+            </a>
+            <label
+              for="sidebar-toggle"
+              class="lg:hidden p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </label>
+          </div>
 
-                <!-- Nhóm Menu Điều Hướng -->
-                <div class="px-3 py-4">
-                    <p class="px-3 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Điều Hướng Cửa
-                        Hàng</p>
-                    <nav class="space-y-1">
-                        <a href="index.html"
-                            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                            </svg>
-                            <span>Trang Chủ</span>
-                        </a>
+          <!-- Nhóm Menu Điều Hướng -->
+          <div class="px-3 py-4">
+            <p
+              class="px-3 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400"
+            >
+              Điều Hướng Cửa Hàng
+            </p>
+            <nav class="space-y-1">
+              <a
+                href="index.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-slate-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+                <span>Trang Chủ</span>
+              </a>
 
-                        <a href="products.html"
-                            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                            </svg>
-                            <span>Sản Phẩm Sinh Viên</span>
-                        </a>
+              <a
+                href="products.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-slate-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  />
+                </svg>
+                <span>Sản Phẩm Sinh Viên</span>
+              </a>
 
-                        <!-- Đang active: Chi Tiết Sản Phẩm -->
-                        <a href="product-detail.html"
-                            class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-50 text-primary-700 font-semibold text-sm transition-colors border-r-4 border-primary-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-600" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
-                            <span>Chi Tiết Sản Phẩm</span>
-                        </a>
+              <!-- Đang active: Chi Tiết Sản Phẩm -->
+              <a
+                href="product-detail.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-50 text-primary-700 font-semibold text-sm transition-colors border-r-4 border-primary-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-primary-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+                <span>Chi Tiết Sản Phẩm</span>
+              </a>
 
-                        <a href="cart.html"
-                            class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
-                            <div class="flex items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                                </svg>
-                                <span>Giỏ Hàng</span>
-                            </div>
-                            <span
-                                class="px-2 py-0.5 text-xs font-semibold rounded-full bg-primary-100 text-primary-700">3</span>
-                        </a>
-
-                        <a href="checkout.html"
-                            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                            <span>Thanh Toán Đơn</span>
-                        </a>
-                    </nav>
-
-                    <p class="px-3 mt-6 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Tài Khoản
-                        Sinh Viên</p>
-                    <nav class="space-y-1">
-                        <a href="profile.html"
-                            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            <span>Hồ Sơ Cá Nhân</span>
-                        </a>
-
-                        <a href="login.html"
-                            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                            </svg>
-                            <span>Đăng Nhập</span>
-                        </a>
-
-                        <a href="register.html"
-                            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                            </svg>
-                            <span>Đăng Ký Tài Khoản</span>
-                        </a>
-                    </nav>
-                </div>
-
-                <div class="mx-3 mt-2 p-3 bg-slate-50 border border-slate-200 rounded-xl">
-                    <div class="flex items-center gap-2 mb-1 text-xs font-semibold text-slate-700">
-                        <span class="w-2.5 h-2.5 rounded-full bg-primary-600"></span>
-                        <span>Theme Linh Hoạt</span>
-                    </div>
-                    <p class="text-[11px] text-slate-500">
-                        Đổi mã màu chủ đạo trong <code class="font-mono text-primary-700">src/index.css</code>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="p-3 border-t border-slate-100 bg-slate-50/50">
-                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
-                    <div class="flex items-center gap-2.5 min-w-0">
-                        <div
-                            class="w-8 h-8 rounded-lg bg-primary-100 text-primary-700 font-bold text-xs flex items-center justify-center shrink-0">
-                            SV
-                        </div>
-                        <div class="min-w-0">
-                            <p class="text-xs font-semibold text-slate-900 truncate">Nguyễn Văn An</p>
-                            <p class="text-[10px] text-slate-500 truncate">MSSV: 202412345</p>
-                        </div>
-                    </div>
-                    <a href="login.html" class="p-1.5 text-slate-400 hover:text-red-600 transition-colors"
-                        title="Đăng xuất">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </aside>
-
-        <!-- KHU VỰC NỘI DUNG CHÍNH -->
-        <div class="flex-1 flex flex-col min-w-0">
-            <!-- Header -->
-            <header
-                class="bg-white border-b border-slate-200 sticky top-0 z-30 px-4 lg:px-8 py-3.5 flex items-center justify-between">
+              <a
+                href="cart.html"
+                class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors"
+              >
                 <div class="flex items-center gap-3">
-                    <label for="sidebar-toggle"
-                        class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </label>
-                    <!-- Breadcrumbs -->
-                    <nav class="flex items-center gap-1.5 text-xs text-slate-500 overflow-x-auto whitespace-nowrap">
-                        <a href="index.html" class="hover:text-primary-600">Trang chủ</a>
-                        <span>/</span>
-                        <a href="products.html" class="hover:text-primary-600">Chuột máy tính</a>
-                        <span>/</span>
-                        <span class="text-slate-800 font-semibold truncate max-w-[150px] sm:max-w-none">Logitech MX
-                            Master 3S</span>
-                    </nav>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5 text-slate-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                  <span>Giỏ Hàng</span>
                 </div>
+                <span
+                  class="px-2 py-0.5 text-xs font-semibold rounded-full bg-primary-100 text-primary-700"
+                  >3</span
+                >
+              </a>
 
-                <div class="flex items-center gap-3">
-                    <a href="cart.html"
-                        class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-600" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                        <span class="hidden sm:inline">Giỏ hàng</span>
-                        <span
-                            class="px-1.5 py-0.2 bg-primary-600 text-white rounded-full text-[10px] font-bold">3</span>
-                    </a>
-                </div>
-            </header>
+              <a
+                href="checkout.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-slate-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+                <span>Thanh Toán Đơn</span>
+              </a>
+            </nav>
 
-            <!-- Main Body -->
-            <main class="flex-1 p-4 lg:p-8 space-y-8 max-w-6xl w-full mx-auto">
-                <!-- KHỐI CHI TIẾT SẢN PHẨM: 2 CỘT (ẢNH + THÔNG TIN MUA) -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                        <!-- Cột Gallery Ảnh Sản Phẩm (5 Cột) -->
-                        <div class="lg:col-span-5 space-y-4">
-                            <div
-                                class="bg-slate-100 rounded-xl overflow-hidden aspect-square border border-slate-200 flex items-center justify-center p-4">
-                                <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80"
-                                    alt="Logitech MX Master 3S" class="w-full h-full object-contain" />
-                            </div>
-                            <!-- Thumbnail List thuần HTML -->
-                            <div class="grid grid-cols-4 gap-2.5">
-                                <div
-                                    class="border-2 border-primary-600 rounded-lg p-1 bg-white aspect-square overflow-hidden cursor-pointer">
-                                    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=200&q=80"
-                                        alt="Góc chụp 1" class="w-full h-full object-cover rounded" />
-                                </div>
-                                <div
-                                    class="border border-slate-200 rounded-lg p-1 bg-white aspect-square overflow-hidden hover:border-primary-400 cursor-pointer">
-                                    <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=200&q=80"
-                                        alt="Góc chụp 2" class="w-full h-full object-cover rounded" />
-                                </div>
-                                <div
-                                    class="border border-slate-200 rounded-lg p-1 bg-white aspect-square overflow-hidden hover:border-primary-400 cursor-pointer">
-                                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=200&q=80"
-                                        alt="Góc chụp 3" class="w-full h-full object-cover rounded" />
-                                </div>
-                                <div
-                                    class="border border-slate-200 rounded-lg p-1 bg-white aspect-square overflow-hidden hover:border-primary-400 cursor-pointer">
-                                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=200&q=80"
-                                        alt="Góc chụp 4" class="w-full h-full object-cover rounded" />
-                                </div>
-                            </div>
-                        </div>
+            <p
+              class="px-3 mt-6 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400"
+            >
+              Tài Khoản Sinh Viên
+            </p>
+            <nav class="space-y-1">
+              <a
+                href="profile.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-slate-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+                <span>Hồ Sơ Cá Nhân</span>
+              </a>
 
-                        <!-- Cột Thông Tin Đặt Hàng (7 Cột) -->
-                        <div class="lg:col-span-7 space-y-5">
-                            <!-- Tiêu đề & Metadata -->
-                            <div class="space-y-2">
-                                <div class="flex items-center gap-2 text-xs text-slate-500">
-                                    <span class="font-semibold text-primary-700">LOGITECH CHÍNH HÃNG</span>
-                                    <span>·</span>
-                                    <span>SKU: LOGI-MX3S-GRY</span>
-                                    <span>·</span>
-                                    <span class="text-emerald-600 font-medium">Sẵn hàng tại KTX A & B</span>
-                                </div>
-                                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
-                                    Chuột Không Dây Công Thái Học Logitech MX Master 3S Quiet Clicks
-                                </h2>
-                                <div class="flex items-center gap-3 text-xs">
-                                    <div class="flex items-center text-amber-500 font-bold">
-                                        ★★★★★ <span class="ml-1 text-slate-800">4.9</span>
-                                    </div>
-                                    <span class="text-slate-300">|</span>
-                                    <span class="text-slate-500">142 sinh viên đánh giá</span>
-                                    <span class="text-slate-300">|</span>
-                                    <span class="text-slate-500">Đã bán 580 chiếc</span>
-                                </div>
-                            </div>
+              <a
+                href="login.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-slate-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                  />
+                </svg>
+                <span>Đăng Nhập</span>
+              </a>
 
-                            <!-- Khối Giá & Ưu đãi sinh viên -->
-                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-                                <div class="flex items-baseline gap-3">
-                                    <span class="text-2xl sm:text-3xl font-extrabold text-primary-700">1.890.000₫</span>
-                                    <span class="text-sm text-slate-400 line-through">2.490.000₫</span>
-                                    <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-700">
-                                        Tiết kiệm 600.000₫
-                                    </span>
-                                </div>
-                                <div class="text-xs text-slate-600 flex items-center gap-1.5 pt-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary-600 shrink-0"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                                    </svg>
-                                    <span>Mã giảm sinh viên: Nhập <strong
-                                            class="font-mono text-primary-700 bg-primary-100 px-1.5 py-0.5 rounded">SINHVIEN2026</strong>
-                                        giảm thêm 50k khi thanh toán</span>
-                                </div>
-                            </div>
+              <a
+                href="register.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-slate-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+                  />
+                </svg>
+                <span>Đăng Ký Tài Khoản</span>
+              </a>
+            </nav>
+          </div>
 
-                            <!-- Form lựa chọn phiên bản (Pure HTML controls) -->
-                            <form action="cart.html" method="get" class="space-y-5">
-                                <!-- Chọn màu sắc -->
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">
-                                        Màu sắc: <span class="font-normal text-slate-600">Graphite (Xám đen chống bám
-                                            vân tay)</span>
-                                    </label>
-                                    <div class="flex flex-wrap gap-2.5">
-                                        <label
-                                            class="border-2 border-primary-600 rounded-lg px-3 py-2 text-xs font-medium flex items-center gap-2 cursor-pointer bg-primary-50/50">
-                                            <input type="radio" name="color" value="graphite" checked
-                                                class="text-primary-600 focus:ring-primary-500" />
-                                            <span>Graphite Xám</span>
-                                        </label>
-                                        <label
-                                            class="border border-slate-200 hover:border-slate-300 rounded-lg px-3 py-2 text-xs font-medium flex items-center gap-2 cursor-pointer">
-                                            <input type="radio" name="color" value="pale-gray"
-                                                class="text-primary-600 focus:ring-primary-500" />
-                                            <span>Pale Gray Trắng</span>
-                                        </label>
-                                        <label
-                                            class="border border-slate-200 hover:border-slate-300 rounded-lg px-3 py-2 text-xs font-medium flex items-center gap-2 cursor-pointer">
-                                            <input type="radio" name="color" value="space-black"
-                                                class="text-primary-600 focus:ring-primary-500" />
-                                            <span>Space Black Đen</span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <!-- Chọn chuẩn kết nối -->
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">
-                                        Chuẩn kết nối:
-                                    </label>
-                                    <div class="flex flex-wrap gap-2.5">
-                                        <label
-                                            class="border-2 border-primary-600 rounded-lg px-3 py-2 text-xs font-medium flex items-center gap-2 cursor-pointer bg-primary-50/50">
-                                            <input type="radio" name="connect" value="dual" checked
-                                                class="text-primary-600" />
-                                            <span>Bluetooth Low Energy + Logi Bolt USB</span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <!-- Số lượng & Nút đặt mua -->
-                                <div class="space-y-3 pt-2">
-                                    <div class="flex items-center gap-4">
-                                        <label for="quantity"
-                                            class="text-xs font-bold text-slate-900 uppercase tracking-wider">Số
-                                            lượng:</label>
-                                        <div
-                                            class="flex items-center border border-slate-200 rounded-lg overflow-hidden bg-white">
-                                            <input type="number" id="quantity" name="quantity" min="1" max="10"
-                                                value="1"
-                                                class="w-16 text-center py-1.5 text-xs text-slate-800 font-bold focus:outline-none" />
-                                        </div>
-                                        <span class="text-xs text-slate-500">(Tối đa 2 chiếc giá sinh viên)</span>
-                                    </div>
-
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                                        <a href="cart.html"
-                                            class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-primary-600 text-primary-700 bg-white hover:bg-primary-50 font-bold text-xs sm:text-sm transition-colors shadow-xs">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                                            </svg>
-                                            <span>Thêm Vào Giỏ Hàng</span>
-                                        </a>
-                                        <a href="checkout.html"
-                                            class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-bold text-xs sm:text-sm transition-colors shadow-xs">
-                                            <span>Mua Ngay Giao Tận KTX</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </form>
-
-                            <!-- Cam kết nhanh -->
-                            <div class="border-t border-slate-100 pt-4 grid grid-cols-2 gap-3 text-xs text-slate-600">
-                                <div class="flex items-center gap-2">
-                                    <span class="text-emerald-600 font-bold">✓</span>
-                                    <span>Bảo hành chính hãng 12 tháng</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="text-emerald-600 font-bold">✓</span>
-                                    <span>Đổi trả 1-đổi-1 trong 30 ngày</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="text-emerald-600 font-bold">✓</span>
-                                    <span>Freeship cho đơn từ 300k</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="text-emerald-600 font-bold">✓</span>
-                                    <span>Tặng kèm tấm lót chuột công thái học</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- THÔNG SỐ KỸ THUẬT & MÔ TẢ CHI TIẾT -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <!-- Cột Mô Tả Sản Phẩm (2 Cột) -->
-                    <div class="lg:col-span-2 bg-white rounded-2xl border border-slate-200 p-6 space-y-4">
-                        <h3 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3">Đặc Điểm Nổi Bật
-                            Dành Cho Sinh Viên</h3>
-                        <div class="text-xs sm:text-sm text-slate-600 space-y-3 leading-relaxed">
-                            <p>
-                                <strong>Logitech MX Master 3S</strong> là dòng chuột biểu tượng dành cho lập trình viên,
-                                sinh viên đồ họa kiến trúc và người làm việc đa nhiệm cường độ cao. Phiên bản 3S được
-                                cải tiến công nghệ nút bấm <strong>Quiet Clicks</strong> giảm đến 90% tiếng ồn click
-                                chuột, giúp bạn thoải mái học tập và làm đồ án đêm tại phòng KTX hoặc thư viện mà không
-                                sợ làm phiền người xung quanh.
-                            </p>
-                            <p>
-                                Con lăn cơ điện tử <strong>MagSpeed Smartshift</strong> cuộn cực nhanh tới 1.000 dòng
-                                code hoặc trang giáo trình PDF chỉ trong 1 giây, đồng thời dừng chính xác trên từng
-                                pixel khi cần phân tích bảng số liệu hay bản vẽ.
-                            </p>
-                            <div
-                                class="p-4 bg-primary-50 rounded-xl border border-primary-200/60 text-primary-900 space-y-1">
-                                <h4 class="font-bold text-xs uppercase tracking-wide">💡 Trải nghiệm thực tế của sinh
-                                    viên:</h4>
-                                <p class="text-xs text-primary-800">
-                                    "Thời lượng pin lên tới 70 ngày sau một lần sạc USB-C. Cắm sạc nhanh 1 phút đủ dùng
-                                    3 tiếng trên giảng đường – cực kỳ hữu ích khi vội đi học."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Đánh giá sinh viên -->
-                        <div class="pt-4 border-t border-slate-100 space-y-3">
-                            <h4 class="text-sm font-bold text-slate-900">Đánh Giá Từ Sinh Viên Đã Mua (142)</h4>
-
-                            <div class="space-y-3">
-                                <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-slate-800">Trần Quốc Bảo · ĐH Bách Khoa
-                                            TP.HCM</span>
-                                        <span class="text-slate-400 text-[11px]">2 ngày trước</span>
-                                    </div>
-                                    <div class="text-amber-500 font-bold">★★★★★</div>
-                                    <p class="text-slate-600">Chuột cầm cực kỳ đầm tay, đỡ đau cổ tay hẳn khi ngồi code
-                                        đồ án tốt nghiệp. Anh giao hàng mang tận sảnh KTX Khu A rất nhiệt tình.</p>
-                                </div>
-
-                                <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-slate-800">Lê Thuỳ Trang · ĐH Kinh Tế Quốc
-                                            Dân</span>
-                                        <span class="text-slate-400 text-[11px]">5 ngày trước</span>
-                                    </div>
-                                    <div class="text-amber-500 font-bold">★★★★★</div>
-                                    <p class="text-slate-600">Được giảm giá sinh viên và tặng lót chuột xịn. Chuột màu
-                                        trắng xám rất hợp với MacBook của mình.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cột Bảng Thông Số Kỹ Thuật (1 Cột) -->
-                    <div class="bg-white rounded-2xl border border-slate-200 p-6 space-y-4">
-                        <h3 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3">Thông Số Kỹ Thuật
-                        </h3>
-                        <div class="divide-y divide-slate-100 text-xs">
-                            <div class="py-2.5 flex justify-between gap-2">
-                                <span class="text-slate-500">Thương hiệu</span>
-                                <span class="font-semibold text-slate-800">Logitech</span>
-                            </div>
-                            <div class="py-2.5 flex justify-between gap-2">
-                                <span class="text-slate-500">Cảm biến</span>
-                                <span class="font-semibold text-slate-800">Darkfield 8.000 DPI</span>
-                            </div>
-                            <div class="py-2.5 flex justify-between gap-2">
-                                <span class="text-slate-500">Thời lượng pin</span>
-                                <span class="font-semibold text-slate-800">Tối đa 70 ngày</span>
-                            </div>
-                            <div class="py-2.5 flex justify-between gap-2">
-                                <span class="text-slate-500">Cổng sạc</span>
-                                <span class="font-semibold text-slate-800">USB Type-C</span>
-                            </div>
-                            <div class="py-2.5 flex justify-between gap-2">
-                                <span class="text-slate-500">Trọng lượng</span>
-                                <span class="font-semibold text-slate-800">141g</span>
-                            </div>
-                            <div class="py-2.5 flex justify-between gap-2">
-                                <span class="text-slate-500">Hệ điều hành</span>
-                                <span class="font-semibold text-slate-800">Windows, macOS, Linux, iPadOS</span>
-                            </div>
-                            <div class="py-2.5 flex justify-between gap-2">
-                                <span class="text-slate-500">Xuất xứ</span>
-                                <span class="font-semibold text-slate-800">Chính hãng Logitech VN</span>
-                            </div>
-                        </div>
-
-                        <!-- Hộp trợ giúp sinh viên -->
-                        <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
-                            <p class="font-bold text-slate-800">Bạn cần tư vấn thêm?</p>
-                            <p class="text-slate-500 leading-relaxed">
-                                Đội ngũ sinh viên hỗ trợ kỹ thuật tại KTX luôn sẵn sàng tư vấn cấu hình phù hợp với
-                                chuyên ngành của bạn.
-                            </p>
-                            <div class="text-primary-700 font-semibold">Hotline SV: 1800 6868 (Miễn phí)</div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <!-- Footer -->
-            <footer
-                class="bg-white border-t border-slate-200 mt-auto py-6 px-4 lg:px-8 text-center text-xs text-slate-500">
-                <p class="font-medium text-slate-700">Đồ án môn Thiết Kế Giao Diện Web · Ngành Công Nghệ Thông Tin</p>
-                <p class="mt-1">Xây dựng bằng <strong class="text-slate-800">HTML5 thuần & Tailwind CSS</strong> · Không
-                    JavaScript · Sidebar đồng nhất.</p>
-            </footer>
+          <div
+            class="mx-3 mt-2 p-3 bg-slate-50 border border-slate-200 rounded-xl"
+          >
+            <div
+              class="flex items-center gap-2 mb-1 text-xs font-semibold text-slate-700"
+            >
+              <span class="w-2.5 h-2.5 rounded-full bg-primary-600"></span>
+              <span>Theme Linh Hoạt</span>
+            </div>
+            <p class="text-[11px] text-slate-500">
+              Đổi mã màu chủ đạo trong
+              <code class="font-mono text-primary-700">src/index.css</code>.
+            </p>
+          </div>
         </div>
-    </div>
-</body>
 
+        <div class="p-3 border-t border-slate-100 bg-slate-50/50">
+          <div
+            class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80"
+          >
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div
+                class="w-8 h-8 rounded-lg bg-primary-100 text-primary-700 font-bold text-xs flex items-center justify-center shrink-0"
+              >
+                SV
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-semibold text-slate-900 truncate">
+                  Nguyễn Văn An
+                </p>
+                <p class="text-[10px] text-slate-500 truncate">
+                  MSSV: 202412345
+                </p>
+              </div>
+            </div>
+            <a
+              href="login.html"
+              class="p-1.5 text-slate-400 hover:text-red-600 transition-colors"
+              title="Đăng xuất"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- KHU VỰC NỘI DUNG CHÍNH -->
+      <div class="flex-1 flex flex-col min-w-0">
+        <!-- Header -->
+        <header
+          class="bg-white border-b border-slate-200 sticky top-0 z-30 px-4 lg:px-8 py-3.5 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-3">
+            <label
+              for="sidebar-toggle"
+              class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </label>
+            <!-- Breadcrumbs -->
+            <nav
+              class="flex items-center gap-1.5 text-xs text-slate-500 overflow-x-auto whitespace-nowrap"
+            >
+              <a href="index.html" class="hover:text-primary-600">Trang chủ</a>
+              <span>/</span>
+              <a href="products.html" class="hover:text-primary-600"
+                >Chuột máy tính</a
+              >
+              <span>/</span>
+              <span
+                class="text-slate-800 font-semibold truncate max-w-[150px] sm:max-w-none"
+                >Logitech MX Master 3S</span
+              >
+            </nav>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a
+              href="cart.html"
+              class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-slate-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              <span class="hidden sm:inline">Giỏ hàng</span>
+              <span
+                class="px-1.5 py-0.2 bg-primary-600 text-white rounded-full text-[10px] font-bold"
+                >3</span
+              >
+            </a>
+          </div>
+        </header>
+
+        <!-- Main Body -->
+        <main class="flex-1 p-4 lg:p-8 space-y-8 max-w-6xl w-full mx-auto">
+          <!-- KHỐI CHI TIẾT SẢN PHẨM: 2 CỘT (ẢNH + THÔNG TIN MUA) -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <!-- Cột Gallery Ảnh Sản Phẩm (5 Cột) -->
+              <div class="lg:col-span-5 space-y-4">
+                <div
+                  class="bg-slate-100 rounded-xl overflow-hidden aspect-square border border-slate-200 flex items-center justify-center p-4"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80"
+                    alt="Logitech MX Master 3S"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <!-- Thumbnail List thuần HTML -->
+                <div class="grid grid-cols-4 gap-2.5">
+                  <div
+                    class="border-2 border-primary-600 rounded-lg p-1 bg-white aspect-square overflow-hidden cursor-pointer"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=200&q=80"
+                      alt="Góc chụp 1"
+                      class="w-full h-full object-cover rounded"
+                    />
+                  </div>
+                  <div
+                    class="border border-slate-200 rounded-lg p-1 bg-white aspect-square overflow-hidden hover:border-primary-400 cursor-pointer"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=200&q=80"
+                      alt="Góc chụp 2"
+                      class="w-full h-full object-cover rounded"
+                    />
+                  </div>
+                  <div
+                    class="border border-slate-200 rounded-lg p-1 bg-white aspect-square overflow-hidden hover:border-primary-400 cursor-pointer"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=200&q=80"
+                      alt="Góc chụp 3"
+                      class="w-full h-full object-cover rounded"
+                    />
+                  </div>
+                  <div
+                    class="border border-slate-200 rounded-lg p-1 bg-white aspect-square overflow-hidden hover:border-primary-400 cursor-pointer"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=200&q=80"
+                      alt="Góc chụp 4"
+                      class="w-full h-full object-cover rounded"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cột Thông Tin Đặt Hàng (7 Cột) -->
+              <div class="lg:col-span-7 space-y-5">
+                <!-- Tiêu đề & Metadata -->
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-xs text-slate-500">
+                    <span class="font-semibold text-primary-700"
+                      >LOGITECH CHÍNH HÃNG</span
+                    >
+                    <span>·</span>
+                    <span>SKU: LOGI-MX3S-GRY</span>
+                    <span>·</span>
+                    <span class="text-emerald-600 font-medium"
+                      >Sẵn hàng tại KTX A & B</span
+                    >
+                  </div>
+                  <h2
+                    class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug"
+                  >
+                    Chuột Không Dây Công Thái Học Logitech MX Master 3S Quiet
+                    Clicks
+                  </h2>
+                  <div class="flex items-center gap-3 text-xs">
+                    <div class="flex items-center text-amber-500 font-bold">
+                      ★★★★★ <span class="ml-1 text-slate-800">4.9</span>
+                    </div>
+                    <span class="text-slate-300">|</span>
+                    <span class="text-slate-500">142 sinh viên đánh giá</span>
+                    <span class="text-slate-300">|</span>
+                    <span class="text-slate-500">Đã bán 580 chiếc</span>
+                  </div>
+                </div>
+
+                <!-- Khối Giá & Ưu đãi sinh viên -->
+                <div
+                  class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2"
+                >
+                  <div class="flex items-baseline gap-3">
+                    <span
+                      class="text-2xl sm:text-3xl font-extrabold text-primary-700"
+                      >1.890.000₫</span
+                    >
+                    <span class="text-sm text-slate-400 line-through"
+                      >2.490.000₫</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-700"
+                    >
+                      Tiết kiệm 600.000₫
+                    </span>
+                  </div>
+                  <div
+                    class="text-xs text-slate-600 flex items-center gap-1.5 pt-1"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 text-primary-600 shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                      />
+                    </svg>
+                    <span
+                      >Mã giảm sinh viên: Nhập
+                      <strong
+                        class="font-mono text-primary-700 bg-primary-100 px-1.5 py-0.5 rounded"
+                        >SINHVIEN2026</strong
+                      >
+                      giảm thêm 50k khi thanh toán</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Form lựa chọn phiên bản (Pure HTML controls) -->
+                <form action="cart.html" method="get" class="space-y-5">
+                  <!-- Chọn màu sắc -->
+                  <div>
+                    <label
+                      class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-2"
+                    >
+                      Màu sắc:
+                      <span class="font-normal text-slate-600"
+                        >Graphite (Xám đen chống bám vân tay)</span
+                      >
+                    </label>
+                    <div class="flex flex-wrap gap-2.5">
+                      <label
+                        class="border-2 border-primary-600 rounded-lg px-3 py-2 text-xs font-medium flex items-center gap-2 cursor-pointer bg-primary-50/50"
+                      >
+                        <input
+                          type="radio"
+                          name="color"
+                          value="graphite"
+                          checked
+                          class="text-primary-600 focus:ring-primary-500"
+                        />
+                        <span>Graphite Xám</span>
+                      </label>
+                      <label
+                        class="border border-slate-200 hover:border-slate-300 rounded-lg px-3 py-2 text-xs font-medium flex items-center gap-2 cursor-pointer"
+                      >
+                        <input
+                          type="radio"
+                          name="color"
+                          value="pale-gray"
+                          class="text-primary-600 focus:ring-primary-500"
+                        />
+                        <span>Pale Gray Trắng</span>
+                      </label>
+                      <label
+                        class="border border-slate-200 hover:border-slate-300 rounded-lg px-3 py-2 text-xs font-medium flex items-center gap-2 cursor-pointer"
+                      >
+                        <input
+                          type="radio"
+                          name="color"
+                          value="space-black"
+                          class="text-primary-600 focus:ring-primary-500"
+                        />
+                        <span>Space Black Đen</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Chọn chuẩn kết nối -->
+                  <div>
+                    <label
+                      class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-2"
+                    >
+                      Chuẩn kết nối:
+                    </label>
+                    <div class="flex flex-wrap gap-2.5">
+                      <label
+                        class="border-2 border-primary-600 rounded-lg px-3 py-2 text-xs font-medium flex items-center gap-2 cursor-pointer bg-primary-50/50"
+                      >
+                        <input
+                          type="radio"
+                          name="connect"
+                          value="dual"
+                          checked
+                          class="text-primary-600"
+                        />
+                        <span>Bluetooth Low Energy + Logi Bolt USB</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Số lượng & Nút đặt mua -->
+                  <div class="space-y-3 pt-2">
+                    <div class="flex items-center gap-4">
+                      <label
+                        for="quantity"
+                        class="text-xs font-bold text-slate-900 uppercase tracking-wider"
+                        >Số lượng:</label
+                      >
+                      <div
+                        class="flex items-center border border-slate-200 rounded-lg overflow-hidden bg-white"
+                      >
+                        <input
+                          type="number"
+                          id="quantity"
+                          name="quantity"
+                          min="1"
+                          max="10"
+                          value="1"
+                          class="w-16 text-center py-1.5 text-xs text-slate-800 font-bold focus:outline-none"
+                        />
+                      </div>
+                      <span class="text-xs text-slate-500"
+                        >(Tối đa 2 chiếc giá sinh viên)</span
+                      >
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                      <a
+                        href="cart.html"
+                        class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-primary-600 text-primary-700 bg-white hover:bg-primary-50 font-bold text-xs sm:text-sm transition-colors shadow-xs"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-4 h-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                          />
+                        </svg>
+                        <span>Thêm Vào Giỏ Hàng</span>
+                      </a>
+                      <a
+                        href="checkout.html"
+                        class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-bold text-xs sm:text-sm transition-colors shadow-xs"
+                      >
+                        <span>Mua Ngay Giao Tận KTX</span>
+                      </a>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- Cam kết nhanh -->
+                <div
+                  class="border-t border-slate-100 pt-4 grid grid-cols-2 gap-3 text-xs text-slate-600"
+                >
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>Bảo hành chính hãng 12 tháng</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>Đổi trả 1-đổi-1 trong 30 ngày</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>Freeship cho đơn từ 300k</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>Tặng kèm tấm lót chuột công thái học</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- THÔNG SỐ KỸ THUẬT & MÔ TẢ CHI TIẾT -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Cột Mô Tả Sản Phẩm (2 Cột) -->
+            <div
+              class="lg:col-span-2 bg-white rounded-2xl border border-slate-200 p-6 space-y-4"
+            >
+              <h3
+                class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3"
+              >
+                Đặc Điểm Nổi Bật Dành Cho Sinh Viên
+              </h3>
+              <div
+                class="text-xs sm:text-sm text-slate-600 space-y-3 leading-relaxed"
+              >
+                <p>
+                  <strong>Logitech MX Master 3S</strong> là dòng chuột biểu
+                  tượng dành cho lập trình viên, sinh viên đồ họa kiến trúc và
+                  người làm việc đa nhiệm cường độ cao. Phiên bản 3S được cải
+                  tiến công nghệ nút bấm <strong>Quiet Clicks</strong> giảm đến
+                  90% tiếng ồn click chuột, giúp bạn thoải mái học tập và làm đồ
+                  án đêm tại phòng KTX hoặc thư viện mà không sợ làm phiền người
+                  xung quanh.
+                </p>
+                <p>
+                  Con lăn cơ điện tử <strong>MagSpeed Smartshift</strong> cuộn
+                  cực nhanh tới 1.000 dòng code hoặc trang giáo trình PDF chỉ
+                  trong 1 giây, đồng thời dừng chính xác trên từng pixel khi cần
+                  phân tích bảng số liệu hay bản vẽ.
+                </p>
+                <div
+                  class="p-4 bg-primary-50 rounded-xl border border-primary-200/60 text-primary-900 space-y-1"
+                >
+                  <h4 class="font-bold text-xs uppercase tracking-wide">
+                    💡 Trải nghiệm thực tế của sinh viên:
+                  </h4>
+                  <p class="text-xs text-primary-800">
+                    "Thời lượng pin lên tới 70 ngày sau một lần sạc USB-C. Cắm
+                    sạc nhanh 1 phút đủ dùng 3 tiếng trên giảng đường – cực kỳ
+                    hữu ích khi vội đi học."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Đánh giá sinh viên -->
+              <div class="pt-4 border-t border-slate-100 space-y-3">
+                <h4 class="text-sm font-bold text-slate-900">
+                  Đánh Giá Từ Sinh Viên Đã Mua (142)
+                </h4>
+
+                <div class="space-y-3">
+                  <div
+                    class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs space-y-1"
+                  >
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-slate-800"
+                        >Trần Quốc Bảo · ĐH Bách Khoa TP.HCM</span
+                      >
+                      <span class="text-slate-400 text-[11px]"
+                        >2 ngày trước</span
+                      >
+                    </div>
+                    <div class="text-amber-500 font-bold">★★★★★</div>
+                    <p class="text-slate-600">
+                      Chuột cầm cực kỳ đầm tay, đỡ đau cổ tay hẳn khi ngồi code
+                      đồ án tốt nghiệp. Anh giao hàng mang tận sảnh KTX Khu A
+                      rất nhiệt tình.
+                    </p>
+                  </div>
+
+                  <div
+                    class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs space-y-1"
+                  >
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-slate-800"
+                        >Lê Thuỳ Trang · ĐH Kinh Tế Quốc Dân</span
+                      >
+                      <span class="text-slate-400 text-[11px]"
+                        >5 ngày trước</span
+                      >
+                    </div>
+                    <div class="text-amber-500 font-bold">★★★★★</div>
+                    <p class="text-slate-600">
+                      Được giảm giá sinh viên và tặng lót chuột xịn. Chuột màu
+                      trắng xám rất hợp với MacBook của mình.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cột Bảng Thông Số Kỹ Thuật (1 Cột) -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 p-6 space-y-4"
+            >
+              <h3
+                class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3"
+              >
+                Thông Số Kỹ Thuật
+              </h3>
+              <div class="divide-y divide-slate-100 text-xs">
+                <div class="py-2.5 flex justify-between gap-2">
+                  <span class="text-slate-500">Thương hiệu</span>
+                  <span class="font-semibold text-slate-800">Logitech</span>
+                </div>
+                <div class="py-2.5 flex justify-between gap-2">
+                  <span class="text-slate-500">Cảm biến</span>
+                  <span class="font-semibold text-slate-800"
+                    >Darkfield 8.000 DPI</span
+                  >
+                </div>
+                <div class="py-2.5 flex justify-between gap-2">
+                  <span class="text-slate-500">Thời lượng pin</span>
+                  <span class="font-semibold text-slate-800"
+                    >Tối đa 70 ngày</span
+                  >
+                </div>
+                <div class="py-2.5 flex justify-between gap-2">
+                  <span class="text-slate-500">Cổng sạc</span>
+                  <span class="font-semibold text-slate-800">USB Type-C</span>
+                </div>
+                <div class="py-2.5 flex justify-between gap-2">
+                  <span class="text-slate-500">Trọng lượng</span>
+                  <span class="font-semibold text-slate-800">141g</span>
+                </div>
+                <div class="py-2.5 flex justify-between gap-2">
+                  <span class="text-slate-500">Hệ điều hành</span>
+                  <span class="font-semibold text-slate-800"
+                    >Windows, macOS, Linux, iPadOS</span
+                  >
+                </div>
+                <div class="py-2.5 flex justify-between gap-2">
+                  <span class="text-slate-500">Xuất xứ</span>
+                  <span class="font-semibold text-slate-800"
+                    >Chính hãng Logitech VN</span
+                  >
+                </div>
+              </div>
+
+              <!-- Hộp trợ giúp sinh viên -->
+              <div
+                class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2"
+              >
+                <p class="font-bold text-slate-800">Bạn cần tư vấn thêm?</p>
+                <p class="text-slate-500 leading-relaxed">
+                  Đội ngũ sinh viên hỗ trợ kỹ thuật tại KTX luôn sẵn sàng tư vấn
+                  cấu hình phù hợp với chuyên ngành của bạn.
+                </p>
+                <div class="text-primary-700 font-semibold">
+                  Hotline SV: 1800 6868 (Miễn phí)
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <div id="footer-placeholder"></div>
+      </div>
+    </div>
+  </body>
 </html>
