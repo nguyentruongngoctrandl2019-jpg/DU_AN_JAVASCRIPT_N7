@@ -1,4 +1,3 @@
-# DU_AN_JAVASCRIPT_N7
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
@@ -7,7 +6,7 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/04cf1850-2b5f-4fc1-8865-eeb06bcdb0ff
+View your app in AI Studio: https://ai.studio/apps/291fa826-bbe3-4ebe-9603-f264bf94e88f
 
 ## Run Locally
 

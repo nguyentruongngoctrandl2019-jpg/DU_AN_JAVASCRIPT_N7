@@ -41,31 +41,39 @@ function saveProductsToStorage() {
 
 // 2. Cập nhật Thống kê
 function updateStats() {
-  document.getElementById('stat-products').textContent = products.length;
-  document.getElementById('stat-categories').textContent = categories.length;
-  document.getElementById('stat-orders').textContent = orders.length;
+  const statP = document.getElementById('stat-products');
+  const statC = document.getElementById('stat-categories');
+  const statO = document.getElementById('stat-orders');
+  if (statP) statP.textContent = products.length;
+  if (statC) statC.textContent = categories.length;
+  if (statO) statO.textContent = orders.length;
 }
 
 // 3. Render lọc danh mục
 function renderCategoryFilter() {
   const select = document.getElementById('filter-category');
+  if (!select) return;
   select.innerHTML = '<option value="">Tất cả danh mục</option>' + 
     categories.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
 }
 
 function renderProductCategoryOptions() {
   const select = document.getElementById('form-category');
+  if (!select) return;
   select.innerHTML = categories.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
 }
 
 // 4. Render Danh sách Sản phẩm
 function renderProducts() {
   const tbody = document.getElementById('product-list');
-  const searchVal = document.getElementById('search-product').value.toLowerCase();
-  const categoryVal = document.getElementById('filter-category').value;
+  if (!tbody) return;
+  const searchInput = document.getElementById('search-product');
+  const filterCat = document.getElementById('filter-category');
+  const searchVal = searchInput ? searchInput.value.toLowerCase() : '';
+  const categoryVal = filterCat ? filterCat.value : '';
 
   const filtered = products.filter(p => {
-    const matchSearch = p.name.toLowerCase().includes(searchVal);
+    const matchSearch = p.name ? p.name.toLowerCase().includes(searchVal) : false;
     const matchCategory = categoryVal ? String(p.cate_id) === String(categoryVal) : true;
     return matchSearch && matchCategory;
   });
@@ -100,6 +108,7 @@ function renderProducts() {
 // 5. Render Danh sách Đơn hàng
 function renderOrders() {
   const tbody = document.getElementById('order-list');
+  if (!tbody) return;
   if (orders.length === 0) {
     tbody.innerHTML = `<tr><td colspan="4" class="p-4 text-center text-slate-400">Không có đơn hàng.</td></tr>`;
     return;
@@ -149,71 +158,78 @@ window.deleteProduct = function(id) {
 
 // 7. Thiết lập Event Listeners
 function setupEventListeners() {
-  // Tìm kiếm & Lọc
-  document.getElementById('search-product').addEventListener('input', renderProducts);
-  document.getElementById('filter-category').addEventListener('change', renderProducts);
+  const searchInput = document.getElementById('search-product');
+  const filterCat = document.getElementById('filter-category');
+  if (searchInput) searchInput.addEventListener('input', renderProducts);
+  if (filterCat) filterCat.addEventListener('change', renderProducts);
 
-  // Chuyển Tab Navigation
   const btnProducts = document.getElementById('nav-products');
   const btnOrders = document.getElementById('nav-orders');
   const sectionProducts = document.getElementById('section-products');
   const sectionOrders = document.getElementById('section-orders');
   const pageTitle = document.getElementById('page-title');
 
-  btnProducts.addEventListener('click', () => {
-    btnProducts.className = 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-primary-700 bg-primary-50 font-semibold text-sm transition-colors cursor-pointer border-r-4 border-primary-600 text-left';
-    btnOrders.className = 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors cursor-pointer text-left';
-    sectionProducts.classList.remove('hidden');
-    sectionOrders.classList.add('hidden');
-    pageTitle.textContent = 'Quản Lý Sản Phẩm';
-  });
+  if (btnProducts && btnOrders && sectionProducts && sectionOrders && pageTitle) {
+    btnProducts.addEventListener('click', () => {
+      btnProducts.className = 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-primary-700 bg-primary-50 font-semibold text-sm transition-colors cursor-pointer border-r-4 border-primary-600 text-left';
+      btnOrders.className = 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors cursor-pointer text-left';
+      sectionProducts.classList.remove('hidden');
+      sectionOrders.classList.add('hidden');
+      pageTitle.textContent = 'Quản Lý Sản Phẩm';
+    });
 
-  btnOrders.addEventListener('click', () => {
-    btnOrders.className = 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-primary-700 bg-primary-50 font-semibold text-sm transition-colors cursor-pointer border-r-4 border-primary-600 text-left';
-    btnProducts.className = 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors cursor-pointer text-left';
-    sectionOrders.classList.remove('hidden');
-    sectionProducts.classList.add('hidden');
-    pageTitle.textContent = 'Quản Lý Đơn Hàng';
-  });
+    btnOrders.addEventListener('click', () => {
+      btnOrders.className = 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-primary-700 bg-primary-50 font-semibold text-sm transition-colors cursor-pointer border-r-4 border-primary-600 text-left';
+      btnProducts.className = 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors cursor-pointer text-left';
+      sectionOrders.classList.remove('hidden');
+      sectionProducts.classList.add('hidden');
+      pageTitle.textContent = 'Quản Lý Đơn Hàng';
+    });
+  }
 
-  // Modal
   const modal = document.getElementById('product-modal');
-  document.getElementById('btn-add-product').addEventListener('click', () => {
-    document.getElementById('modal-title').textContent = 'Thêm Sản Phẩm Mới';
-    document.getElementById('product-form').reset();
-    document.getElementById('form-product-id').value = '';
-    modal.classList.remove('hidden');
-  });
+  const btnAdd = document.getElementById('btn-add-product');
+  const btnClose = document.getElementById('close-modal');
+  const btnCancel = document.getElementById('btn-cancel-modal');
+  const productForm = document.getElementById('product-form');
 
-  document.getElementById('close-modal').addEventListener('click', () => modal.classList.add('hidden'));
-  document.getElementById('btn-cancel-modal').addEventListener('click', () => modal.classList.add('hidden'));
+  if (btnAdd && modal) {
+    btnAdd.addEventListener('click', () => {
+      document.getElementById('modal-title').textContent = 'Thêm Sản Phẩm Mới';
+      if (productForm) productForm.reset();
+      document.getElementById('form-product-id').value = '';
+      modal.classList.remove('hidden');
+    });
+  }
 
-  // Submit Form
-  document.getElementById('product-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const id = document.getElementById('form-product-id').value;
-    const name = document.getElementById('form-name').value;
-    const cate_id = Number(document.getElementById('form-category').value);
-    const image = document.getElementById('form-image').value || 'https://picsum.photos/400/400';
-    const detail = document.getElementById('form-detail').value;
+  if (btnClose && modal) btnClose.addEventListener('click', () => modal.classList.add('hidden'));
+  if (btnCancel && modal) btnCancel.addEventListener('click', () => modal.classList.add('hidden'));
 
-    if (id) {
-      // Update
-      const index = products.findIndex(p => String(p.id) === String(id));
-      if (index !== -1) {
-        products[index] = { ...products[index], name, cate_id, image, detail };
+  if (productForm && modal) {
+    productForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const id = document.getElementById('form-product-id').value;
+      const name = document.getElementById('form-name').value;
+      const cate_id = Number(document.getElementById('form-category').value);
+      const image = document.getElementById('form-image').value || 'https://picsum.photos/400/400';
+      const detail = document.getElementById('form-detail').value;
+
+      if (id) {
+        const index = products.findIndex(p => String(p.id) === String(id));
+        if (index !== -1) {
+          products[index] = { ...products[index], name, cate_id, image, detail };
+        }
+      } else {
+        const newId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
+        products.unshift({ id: newId, name, cate_id, image, detail });
       }
-    } else {
-      // Create
-      const newId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
-      products.unshift({ id: newId, name, cate_id, image, detail });
-    }
 
-    saveProductsToStorage();
-    renderProducts();
-    updateStats();
-    modal.classList.add('hidden');
-  });
+      saveProductsToStorage();
+      renderProducts();
+      updateStats();
+      modal.classList.add('hidden');
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initAdmin);

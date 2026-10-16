@@ -7,6 +7,7 @@
     <title>Hồ Sơ Sinh Viên - UniStore</title>
     <meta name="description"
         content="Quản lý thông tin cá nhân, thẻ sinh viên xác thực và lịch sử đơn hàng tại UniStore." />
+    <link rel="stylesheet" href="/src/index.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
@@ -37,7 +38,6 @@
   }
 }
     </style>
-        <link rel="stylesheet" href="/src/index.css" />
 </head>
 
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
@@ -79,8 +79,7 @@
 
                 <!-- Nhóm Menu Điều Hướng -->
                 <div class="px-3 py-4">
-                    <p class="px-3 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Điều Hướng Cửa
-                        Hàng</p>
+                    <p class="px-3 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Điều Hướng Cửa Hàng</p>
                     <nav class="space-y-1">
                         <a href="index.html"
                             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
@@ -124,8 +123,7 @@
                                 </svg>
                                 <span>Giỏ Hàng</span>
                             </div>
-                            <span
-                                class="px-2 py-0.5 text-xs font-semibold rounded-full bg-primary-100 text-primary-700">3</span>
+                            <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-primary-100 text-primary-700">3</span>
                         </a>
 
                         <a href="checkout.html"
@@ -139,8 +137,7 @@
                         </a>
                     </nav>
 
-                    <p class="px-3 mt-6 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Tài Khoản
-                        Sinh Viên</p>
+                    <p class="px-3 mt-6 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Tài Khoản Sinh Viên</p>
                     <nav class="space-y-1">
                         <!-- Đang active: Hồ Sơ Cá Nhân -->
                         <a href="profile.html"
@@ -174,16 +171,6 @@
                         </a>
                     </nav>
                 </div>
-
-                <div class="mx-3 mt-2 p-3 bg-slate-50 border border-slate-200 rounded-xl">
-                    <div class="flex items-center gap-2 mb-1 text-xs font-semibold text-slate-700">
-                        <span class="w-2.5 h-2.5 rounded-full bg-primary-600"></span>
-                        <span>Theme Linh Hoạt</span>
-                    </div>
-                    <p class="text-[11px] text-slate-500">
-                        Đổi mã màu chủ đạo trong <code class="font-mono text-primary-700">src/index.css</code>.
-                    </p>
-                </div>
             </div>
 
             <div class="p-3 border-t border-slate-100 bg-slate-50/50">
@@ -198,21 +185,12 @@
                             <p class="text-[10px] text-slate-500 truncate">MSSV: 202412345</p>
                         </div>
                     </div>
-                    <a href="login.html" class="p-1.5 text-slate-400 hover:text-red-600 transition-colors"
-                        title="Đăng xuất">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                        </svg>
-                    </a>
                 </div>
             </div>
         </aside>
 
         <!-- KHU VỰC NỘI DUNG CHÍNH -->
         <div class="flex-1 flex flex-col min-w-0">
-            <!-- Header -->
             <header
                 class="bg-white border-b border-slate-200 sticky top-0 z-30 px-4 lg:px-8 py-3.5 flex items-center justify-between">
                 <div class="flex items-center gap-3">
@@ -225,8 +203,7 @@
                     </label>
                     <div>
                         <h1 class="text-lg lg:text-xl font-bold text-slate-900">Hồ Sơ Cá Nhân & Đơn Hàng</h1>
-                        <p class="text-xs text-slate-500">Quản lý thông tin tài khoản sinh viên và theo dõi tiến độ giao
-                            hàng</p>
+                        <p class="text-xs text-slate-500">Quản lý thông tin tài khoản sinh viên và theo dõi tiến độ giao hàng</p>
                     </div>
                 </div>
 
@@ -277,138 +254,6 @@
                     </div>
                 </div>
 
-                <!-- LAYOUT 2 CỘT (FORM THÔNG TIN + THẺ SINH VIÊN ĐIỆN TỬ) -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    <!-- Cột Form Cập Nhật Thông Tin (7 Cột) -->
-                    <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 space-y-5">
-                        <h3
-                            class="text-xs font-bold text-slate-900 uppercase tracking-wider border-b border-slate-100 pb-3">
-                            Chỉnh Sửa Thông Tin Cá Nhân
-                        </h3>
-
-                        <form action="profile.html" method="get" class="space-y-4 text-xs">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="space-y-1">
-                                    <label class="font-semibold text-slate-700">Họ và tên sinh viên</label>
-                                    <input type="text" value="Nguyễn Văn An"
-                                        class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
-                                </div>
-                                <div class="space-y-1">
-                                    <label class="font-semibold text-slate-700">Mã số sinh viên (MSSV)</label>
-                                    <input type="text" value="202412345" readonly
-                                        class="w-full bg-slate-100 border border-slate-200 rounded-lg px-3 py-2 text-slate-500 cursor-not-allowed" />
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="space-y-1">
-                                    <label class="font-semibold text-slate-700">Email trường học
-                                        (@sinhvien.edu.vn)</label>
-                                    <input type="email" value="an.nguyen24@sinhvien.edu.vn"
-                                        class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
-                                </div>
-                                <div class="space-y-1">
-                                    <label class="font-semibold text-slate-700">Số điện thoại liên hệ</label>
-                                    <input type="tel" value="0912 345 678"
-                                        class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="space-y-1">
-                                    <label class="font-semibold text-slate-700">Trường Đại học / Cao đẳng</label>
-                                    <input type="text" value="Đại học Bách Khoa - ĐHQG TP.HCM"
-                                        class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
-                                </div>
-                                <div class="space-y-1">
-                                    <label class="font-semibold text-slate-700">Niên khóa đào tạo</label>
-                                    <input type="text" value="Khóa 2024 - 2028 (Năm 2)"
-                                        class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
-                                </div>
-                            </div>
-
-                            <div class="space-y-1">
-                                <label class="font-semibold text-slate-700">Địa chỉ ký túc xá / Chỗ ở nhận hàng</label>
-                                <input type="text"
-                                    value="Phòng 308, Nhà A15, Ký túc xá Khu A, ĐHQG TP.HCM, Phường Linh Trung, Thủ Đức"
-                                    class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
-                            </div>
-
-                            <div class="pt-2 flex items-center justify-end gap-3">
-                                <button type="submit"
-                                    class="px-5 py-2.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg transition-colors shadow-xs cursor-pointer">
-                                    Lưu Thay Đổi
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Cột Thẻ Sinh Viên Điện Tử & Trợ Cấp (5 Cột) -->
-                    <div class="lg:col-span-5 space-y-5">
-                        <!-- Khối mô phỏng thẻ sinh viên xác thực -->
-                        <div
-                            class="bg-gradient-to-br from-slate-900 via-primary-950 to-primary-900 text-white rounded-2xl p-5 shadow-lg border border-slate-700 relative overflow-hidden">
-                            <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
-                                <div class="flex items-center gap-2">
-                                    <div
-                                        class="w-7 h-7 rounded-lg bg-white/20 flex items-center justify-center font-bold text-xs">
-                                        🎓
-                                    </div>
-                                    <div>
-                                        <span class="text-xs font-bold uppercase tracking-wider block">Thẻ Sinh Viên
-                                            Điện Tử</span>
-                                        <span class="text-[10px] text-primary-200 block">UniStore Student Pass</span>
-                                    </div>
-                                </div>
-                                <span
-                                    class="text-[10px] font-mono bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">
-                                    ACTIVE
-                                </span>
-                            </div>
-
-                            <div class="space-y-3">
-                                <div class="flex items-center gap-3">
-                                    <div
-                                        class="w-12 h-14 bg-white/10 rounded-lg border border-white/20 flex items-center justify-center font-bold text-sm text-primary-200">
-                                        SV
-                                    </div>
-                                    <div class="space-y-0.5 text-xs">
-                                        <p class="font-bold text-white text-sm">NGUYỄN VĂN AN</p>
-                                        <p class="font-mono text-primary-200 text-xs">MSSV: 202412345</p>
-                                        <p class="text-[10px] text-slate-300">ĐH Bách Khoa TP.HCM</p>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-t border-white/10 pt-3 flex items-center justify-between text-[11px] text-primary-200">
-                                    <span>Hạn ưu đãi: 06/2028</span>
-                                    <span class="font-mono tracking-widest text-white/70">||| | |||| | |||</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hộp Thống kê quyền lợi đã nhận -->
-                        <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-3 text-xs">
-                            <h4 class="font-bold text-slate-900 uppercase tracking-wider">Đặc Quyền Của Bạn Tại UniStore
-                            </h4>
-                            <div class="space-y-2 text-slate-600">
-                                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50">
-                                    <span>Mức giảm cố định:</span>
-                                    <strong class="text-primary-700">15% cho tất cả phụ kiện</strong>
-                                </div>
-                                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50">
-                                    <span>Số lần freeship KTX:</span>
-                                    <strong class="text-emerald-600">Không giới hạn</strong>
-                                </div>
-                                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50">
-                                    <span>Đã tiết kiệm được:</span>
-                                    <strong class="text-slate-900">820.000₫ trong học kỳ</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- LỊCH SỬ ĐƠN HÀNG GẦN ĐÂY -->
                 <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
                     <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
@@ -420,7 +265,6 @@
                         </a>
                     </div>
 
-                    <!-- Bảng danh sách đơn hàng -->
                     <div class="overflow-x-auto">
                         <table class="w-full text-left text-xs">
                             <thead
@@ -436,32 +280,29 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100">
-                                <!-- Đơn 1 -->
                                 <tr class="hover:bg-slate-50/80 transition-colors">
-                                    <td class="py-3 px-4 font-mono font-bold text-primary-700">#UNI-8921</td>
-                                    <td class="py-3 px-4 text-slate-600">Hôm nay, 14:20</td>
+                                    <td class="py-3 px-4 font-mono font-bold text-primary-700">#UNI-9028</td>
+                                    <td class="py-3 px-4 text-slate-600">Vừa xong</td>
                                     <td class="py-3 px-4 text-slate-800 font-medium">Logitech MX Master 3S + 2 món</td>
                                     <td class="py-3 px-4 text-slate-600">KTX Khu A, P.308</td>
                                     <td class="py-3 px-4 font-bold text-slate-900">3.080.000₫</td>
                                     <td class="py-3 px-4">
                                         <span
-                                            class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-800">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                                            Đang giao KTX
+                                            class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                            Đã xác nhận & đóng gói
                                         </span>
                                     </td>
                                     <td class="py-3 px-4 text-right">
-                                        <a href="product-detail.html"
-                                            class="font-semibold text-primary-600 hover:underline">Xem lại</a>
+                                        <a href="thank-you.html"
+                                            class="font-semibold text-primary-600 hover:underline">Xem hóa đơn</a>
                                     </td>
                                 </tr>
 
-                                <!-- Đơn 2 -->
                                 <tr class="hover:bg-slate-50/80 transition-colors">
                                     <td class="py-3 px-4 font-mono font-bold text-primary-700">#UNI-7412</td>
                                     <td class="py-3 px-4 text-slate-600">15/09/2026</td>
-                                    <td class="py-3 px-4 text-slate-800 font-medium">Giá đỡ laptop bằng nhôm gấp gọn
-                                    </td>
+                                    <td class="py-3 px-4 text-slate-800 font-medium">Giá đỡ laptop bằng nhôm gấp gọn</td>
                                     <td class="py-3 px-4 text-slate-600">KTX Khu A, Cổng 1</td>
                                     <td class="py-3 px-4 font-bold text-slate-900">129.000₫</td>
                                     <td class="py-3 px-4">
@@ -476,26 +317,6 @@
                                             class="font-semibold text-primary-600 hover:underline">Đánh giá</a>
                                     </td>
                                 </tr>
-
-                                <!-- Đơn 3 -->
-                                <tr class="hover:bg-slate-50/80 transition-colors">
-                                    <td class="py-3 px-4 font-mono font-bold text-primary-700">#UNI-6204</td>
-                                    <td class="py-3 px-4 text-slate-600">01/09/2026</td>
-                                    <td class="py-3 px-4 text-slate-800 font-medium">Hub Baseus 8-in-1 Type-C</td>
-                                    <td class="py-3 px-4 text-slate-600">KTX Khu A, P.308</td>
-                                    <td class="py-3 px-4 font-bold text-slate-900">390.000₫</td>
-                                    <td class="py-3 px-4">
-                                        <span
-                                            class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                                            Đã giao thành công
-                                        </span>
-                                    </td>
-                                    <td class="py-3 px-4 text-right">
-                                        <a href="product-detail.html"
-                                            class="font-semibold text-primary-600 hover:underline">Mua lại</a>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -506,8 +327,7 @@
             <footer
                 class="bg-white border-t border-slate-200 mt-auto py-6 px-4 lg:px-8 text-center text-xs text-slate-500">
                 <p class="font-medium text-slate-700">Đồ án môn Thiết Kế Giao Diện Web · Ngành Công Nghệ Thông Tin</p>
-                <p class="mt-1">Xây dựng bằng <strong class="text-slate-800">HTML5 thuần & Tailwind CSS</strong> · Không
-                    JavaScript · Sidebar đồng nhất.</p>
+                <p class="mt-1">Xây dựng bằng <strong class="text-slate-800">HTML5 thuần & Tailwind CSS</strong> · Không JavaScript · Sidebar đồng nhất.</p>
             </footer>
         </div>
     </div>

@@ -7,6 +7,7 @@
     <title>UniStore - Cửa Hàng Trực Tuyến Sinh Viên</title>
     <meta name="description"
         content="Giao diện website thương mại điện tử đa trang thuần HTML và Tailwind CSS cho sinh viên, không JavaScript, chuẩn responsive với sidebar đồng nhất." />
+    <link rel="stylesheet" href="/src/index.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
@@ -40,7 +41,7 @@
 </head>
 
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
-    <!-- Checkbox điều khiển mở/đóng Sidebar trên Mobile (Hoàn toàn bằng CSS, không dùng JS) -->
+    <!-- Checkbox điều khiển mở/đóng Sidebar trên Mobile -->
     <input type="checkbox" id="sidebar-toggle" class="peer hidden" />
 
     <!-- Lớp nền làm mờ khi mở Sidebar trên Mobile -->
@@ -49,9 +50,7 @@
         aria-hidden="true"></label>
 
     <div class="flex flex-1">
-        <!-- ==========================================
-           SIDEBAR ĐIỀU HƯỚNG ĐỒNG NHẤT (HTML & TAILWIND)
-           ========================================== -->
+        <!-- SIDEBAR ĐIỀU HƯỚNG ĐỒNG NHẤT -->
         <aside
             class="fixed top-0 bottom-0 left-0 z-50 w-72 bg-white border-r border-slate-200 flex flex-col justify-between transition-transform duration-200 ease-in-out -translate-x-full peer-checked:translate-x-0 lg:translate-x-0 lg:static lg:h-screen lg:sticky shrink-0 overflow-y-auto">
             <div>
@@ -71,7 +70,6 @@
                             <span class="text-[11px] font-medium text-slate-500 block">Đồ án Web · Sinh viên</span>
                         </div>
                     </a>
-                    <!-- Nút đóng sidebar chỉ hiện trên Mobile -->
                     <label for="sidebar-toggle"
                         class="lg:hidden p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 cursor-pointer"
                         title="Đóng menu">
@@ -84,8 +82,7 @@
 
                 <!-- Nhóm Menu Điều Hướng Chính -->
                 <div class="px-3 py-4">
-                    <p class="px-3 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Điều Hướng Cửa
-                        Hàng</p>
+                    <p class="px-3 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Điều Hướng Cửa Hàng</p>
                     <nav class="space-y-1">
                         <!-- Trang Chủ: Đang Active -->
                         <a href="index.html"
@@ -149,11 +146,8 @@
                         </a>
                     </nav>
 
-                    <p class="px-3 mt-6 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Tài Khoản
-                        Sinh Viên
-                    </p>
+                    <p class="px-3 mt-6 mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Tài Khoản Sinh Viên</p>
                     <nav class="space-y-1">
-                        <!-- Thông Tin Cá Nhân -->
                         <a href="profile.html"
                             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
@@ -164,7 +158,6 @@
                             <span>Hồ Sơ Cá Nhân</span>
                         </a>
 
-                        <!-- Đăng Nhập -->
                         <a href="login.html"
                             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
@@ -175,7 +168,6 @@
                             <span>Đăng Nhập</span>
                         </a>
 
-                        <!-- Đăng Ký -->
                         <a href="register.html"
                             class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 text-sm font-medium transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" fill="none"
@@ -188,7 +180,6 @@
                     </nav>
                 </div>
 
-                <!-- Hộp ghi chú sinh viên: Tùy biến màu sắc -->
                 <div class="mx-3 mt-2 p-3 bg-slate-50 border border-slate-200 rounded-xl">
                     <div class="flex items-center gap-2 mb-1.5 text-xs font-semibold text-slate-700">
                         <span class="w-2.5 h-2.5 rounded-full bg-primary-600"></span>
@@ -227,15 +218,11 @@
             </div>
         </aside>
 
-        <!-- ==========================================
-           NỘI DUNG CHÍNH (MAIN CONTENT)
-           ========================================== -->
+        <!-- NỘI DUNG CHÍNH -->
         <div class="flex-1 flex flex-col min-w-0">
-            <!-- Topbar trên Mobile và Desktop Header -->
             <header
                 class="bg-white border-b border-slate-200 sticky top-0 z-30 px-4 lg:px-8 py-3.5 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <!-- Nút bật menu hamburger trên mobile -->
                     <label for="sidebar-toggle"
                         class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 cursor-pointer"
                         title="Mở danh mục">
@@ -246,9 +233,7 @@
                     </label>
                     <div>
                         <h1 class="text-lg lg:text-xl font-bold text-slate-900">Trang Chủ UniStore</h1>
-                        <p class="text-xs text-slate-500 hidden sm:block">Hệ thống mua sắm thiết bị công nghệ & học tập
-                            cho sinh
-                            viên</p>
+                        <p class="text-xs text-slate-500 hidden sm:block">Hệ thống mua sắm thiết bị công nghệ & học tập cho sinh viên</p>
                     </div>
                 </div>
 
@@ -280,7 +265,7 @@
 
             <!-- Main Body -->
             <main class="flex-1 p-4 lg:p-8 space-y-8 max-w-7xl w-full mx-auto">
-                <!-- Hero Banner: Giảm giá sinh viên -->
+                <!-- Hero Banner -->
                 <section
                     class="bg-gradient-to-r from-primary-900 via-primary-800 to-primary-700 rounded-2xl text-white p-6 sm:p-10 relative overflow-hidden shadow-sm">
                     <div class="relative z-10 max-w-2xl space-y-4">
@@ -292,9 +277,7 @@
                             Trang bị công nghệ chuẩn đại học – Giá sinh viên tiết kiệm đến 40%
                         </h2>
                         <p class="text-sm sm:text-base text-primary-100/90 leading-relaxed">
-                            Laptop, chuột công thái học, bàn phím cơ, balo chống gù và phụ kiện chính hãng. Hỗ trợ giao
-                            tận phòng KTX
-                            trường Đại học chỉ trong 2 giờ.
+                            Laptop, chuột công thái học, bàn phím cơ, balo chống gù và phụ kiện chính hãng. Hỗ trợ giao tận phòng KTX trường Đại học chỉ trong 2 giờ.
                         </p>
                         <div class="flex flex-wrap items-center gap-3 pt-2">
                             <a href="products.html"
@@ -307,16 +290,9 @@
                             </a>
                         </div>
                     </div>
-                    <!-- Họa tiết nền vector nhẹ nhàng -->
-                    <div
-                        class="absolute right-0 bottom-0 top-0 w-1/3 opacity-10 pointer-events-none hidden md:flex items-center justify-center">
-                        <svg class="w-80 h-80 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>
-                    </div>
                 </section>
 
-                <!-- Danh mục nhanh (Quick Categories) -->
+                <!-- Danh mục nhanh -->
                 <section class="space-y-4">
                     <div class="flex items-center justify-between">
                         <div>
@@ -324,12 +300,10 @@
                             <p class="text-xs text-slate-500">Thiết bị cần thiết cho học tập, thuyết trình và đồ án</p>
                         </div>
                         <a href="products.html"
-                            class="text-xs font-semibold text-primary-600 hover:text-primary-700">Xem tất cả
-                            &rarr;</a>
+                            class="text-xs font-semibold text-primary-600 hover:text-primary-700">Xem tất cả &rarr;</a>
                     </div>
 
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                        <!-- Item 1 -->
                         <a href="products.html"
                             class="p-4 rounded-xl bg-white border border-slate-200 hover:border-primary-400 hover:shadow-sm transition-all group">
                             <div
@@ -340,13 +314,10 @@
                                         d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </div>
-                            <h4 class="text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
-                                Laptop & Màn
-                                hình</h4>
+                            <h4 class="text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">Laptop & Màn hình</h4>
                             <p class="text-xs text-slate-500 mt-0.5">38 mẫu giảm giá</p>
                         </a>
 
-                        <!-- Item 2 -->
                         <a href="products.html"
                             class="p-4 rounded-xl bg-white border border-slate-200 hover:border-primary-400 hover:shadow-sm transition-all group">
                             <div
@@ -357,13 +328,10 @@
                                         d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                                 </svg>
                             </div>
-                            <h4 class="text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
-                                Chuột & Bàn
-                                phím cơ</h4>
+                            <h4 class="text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">Chuột & Bàn phím cơ</h4>
                             <p class="text-xs text-slate-500 mt-0.5">54 mẫu học tập & code</p>
                         </a>
 
-                        <!-- Item 3 -->
                         <a href="products.html"
                             class="p-4 rounded-xl bg-white border border-slate-200 hover:border-primary-400 hover:shadow-sm transition-all group">
                             <div
@@ -374,13 +342,10 @@
                                         d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                                 </svg>
                             </div>
-                            <h4 class="text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
-                                Tai nghe Thư
-                                viện</h4>
+                            <h4 class="text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">Tai nghe Thư viện</h4>
                             <p class="text-xs text-slate-500 mt-0.5">Chống ồn tập trung</p>
                         </a>
 
-                        <!-- Item 4 -->
                         <a href="products.html"
                             class="p-4 rounded-xl bg-white border border-slate-200 hover:border-primary-400 hover:shadow-sm transition-all group">
                             <div
@@ -391,44 +356,35 @@
                                         d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                                 </svg>
                             </div>
-                            <h4 class="text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
-                                Balo & Hub
-                                Chuyển</h4>
+                            <h4 class="text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">Balo & Hub Chuyển</h4>
                             <p class="text-xs text-slate-500 mt-0.5">Chống sốc, chống mưa</p>
                         </a>
                     </div>
                 </section>
 
-                <!-- Sản phẩm Nổi Bật / Bán Chạy Nhất -->
+                <!-- Sản phẩm Nổi Bật -->
                 <section class="space-y-4">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                         <div>
                             <h3 class="text-lg font-bold text-slate-900">Sản Phẩm Bán Chạy Cho Sinh Viên</h3>
-                            <p class="text-xs text-slate-500">Được sinh viên các trường Bách Khoa, CNTT, Kinh Tế tin
-                                dùng nhiều nhất
-                            </p>
+                            <p class="text-xs text-slate-500">Được sinh viên các trường Bách Khoa, CNTT, Kinh Tế tin dùng nhiều nhất</p>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <a href="products.html"
-                                class="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:bg-slate-100 transition-colors">
-                                Tất cả sản phẩm
-                            </a>
-                        </div>
+                        <a href="products.html"
+                            class="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:bg-slate-100 transition-colors">
+                            Tất cả sản phẩm
+                        </a>
                     </div>
 
                     <!-- Grid 4 Card Sản Phẩm -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         <!-- Card 1 -->
-                        <div
-                            class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between group">
+                        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between group">
                             <div>
-                                <div
-                                    class="relative bg-slate-100 aspect-square overflow-hidden flex items-center justify-center">
+                                <div class="relative bg-slate-100 aspect-square overflow-hidden flex items-center justify-center">
                                     <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80"
                                         alt="Chuột Không Dây Công Thái Học"
                                         class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" />
-                                    <span
-                                        class="absolute top-2.5 left-2.5 bg-rose-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md shadow-xs">
+                                    <span class="absolute top-2.5 left-2.5 bg-rose-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md shadow-xs">
                                         -25% Sinh viên
                                     </span>
                                 </div>
@@ -467,16 +423,13 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div
-                            class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between group">
+                        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between group">
                             <div>
-                                <div
-                                    class="relative bg-slate-100 aspect-square overflow-hidden flex items-center justify-center">
+                                <div class="relative bg-slate-100 aspect-square overflow-hidden flex items-center justify-center">
                                     <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80"
                                         alt="Bàn phím cơ sinh viên"
                                         class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" />
-                                    <span
-                                        class="absolute top-2.5 left-2.5 bg-primary-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md shadow-xs">
+                                    <span class="absolute top-2.5 left-2.5 bg-primary-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md shadow-xs">
                                         Hot Pick
                                     </span>
                                 </div>
@@ -515,16 +468,13 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div
-                            class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between group">
+                        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between group">
                             <div>
-                                <div
-                                    class="relative bg-slate-100 aspect-square overflow-hidden flex items-center justify-center">
+                                <div class="relative bg-slate-100 aspect-square overflow-hidden flex items-center justify-center">
                                     <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
                                         alt="Balo laptop sinh viên"
                                         class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" />
-                                    <span
-                                        class="absolute top-2.5 left-2.5 bg-rose-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md shadow-xs">
+                                    <span class="absolute top-2.5 left-2.5 bg-rose-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md shadow-xs">
                                         -30% SV
                                     </span>
                                 </div>
@@ -563,16 +513,13 @@
                         </div>
 
                         <!-- Card 4 -->
-                        <div
-                            class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between group">
+                        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between group">
                             <div>
-                                <div
-                                    class="relative bg-slate-100 aspect-square overflow-hidden flex items-center justify-center">
+                                <div class="relative bg-slate-100 aspect-square overflow-hidden flex items-center justify-center">
                                     <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
                                         alt="Tai nghe chống ồn"
                                         class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" />
-                                    <span
-                                        class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md shadow-xs">
+                                    <span class="absolute top-2.5 left-2.5 bg-emerald-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md shadow-xs">
                                         Bảo hành 12T
                                     </span>
                                 </div>
@@ -612,11 +559,10 @@
                     </div>
                 </section>
 
-                <!-- 3 Cam kết hỗ trợ đặc quyền sinh viên -->
+                <!-- Cam kết -->
                 <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="p-5 rounded-xl bg-white border border-slate-200 flex items-start gap-3.5">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center shrink-0">
+                        <div class="w-10 h-10 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center shrink-0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -624,15 +570,12 @@
                         </div>
                         <div>
                             <h4 class="text-sm font-bold text-slate-900">Giao nhanh KTX trong 2h</h4>
-                            <p class="text-xs text-slate-500 mt-1">Giao tận cổng ký túc xá ĐHQG, Bách Khoa, Kinh Tế và
-                                các trường ĐH
-                                lớn.</p>
+                            <p class="text-xs text-slate-500 mt-1">Giao tận cổng ký túc xá ĐHQG, Bách Khoa, Kinh Tế và các trường ĐH lớn.</p>
                         </div>
                     </div>
 
                     <div class="p-5 rounded-xl bg-white border border-slate-200 flex items-start gap-3.5">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -641,15 +584,12 @@
                         </div>
                         <div>
                             <h4 class="text-sm font-bold text-slate-900">Bảo hành 1 đổi 1 trong 30 ngày</h4>
-                            <p class="text-xs text-slate-500 mt-1">Lỗi kỹ thuật được đổi mới ngay lập tức, không làm
-                                gián đoạn việc
-                                làm bài tập.</p>
+                            <p class="text-xs text-slate-500 mt-1">Lỗi kỹ thuật được đổi mới ngay lập tức, không làm gián đoạn việc làm bài tập.</p>
                         </div>
                     </div>
 
                     <div class="p-5 rounded-xl bg-white border border-slate-200 flex items-start gap-3.5">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+                        <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -658,21 +598,17 @@
                         </div>
                         <div>
                             <h4 class="text-sm font-bold text-slate-900">Mã giảm thêm với Email .EDU</h4>
-                            <p class="text-xs text-slate-500 mt-1">Đăng ký bằng email trường nhận voucher giảm trực tiếp
-                                100.000₫ cho
-                                đơn đầu tiên.</p>
+                            <p class="text-xs text-slate-500 mt-1">Đăng ký bằng email trường nhận voucher giảm trực tiếp 100.000₫ cho đơn đầu tiên.</p>
                         </div>
                     </div>
                 </section>
             </main>
 
-            <!-- Footer Đồ án Sinh viên -->
+            <!-- Footer -->
             <footer
                 class="bg-white border-t border-slate-200 mt-auto py-6 px-4 lg:px-8 text-center text-xs text-slate-500 space-y-2">
                 <p class="font-medium text-slate-700">Đồ án môn Thiết Kế Giao Diện Web · Ngành Công Nghệ Thông Tin</p>
-                <p>Xây dựng hoàn toàn bằng <strong class="text-slate-800">HTML5 thuần & Tailwind CSS</strong> · Không sử
-                    dụng
-                    JavaScript hay thư viện ngoài.</p>
+                <p>Xây dựng hoàn toàn bằng <strong class="text-slate-800">HTML5 thuần & Tailwind CSS</strong> · Không sử dụng JavaScript hay thư viện ngoài.</p>
                 <div class="flex justify-center gap-4 text-slate-400 pt-2 text-[11px]">
                     <a href="index.html" class="hover:text-primary-600">Trang chủ</a>
                     <span>·</span>

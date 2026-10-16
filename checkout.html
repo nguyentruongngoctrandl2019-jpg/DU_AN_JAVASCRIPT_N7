@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thanh Toán Đơn Hàng - UniStore</title>
     <meta name="description" content="Thanh toán đơn hàng thiết bị học tập và giao nhanh tại ký túc xá sinh viên." />
+    <link rel="stylesheet" href="/src/index.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
@@ -35,7 +36,6 @@
   }
 }
     </style>
-    <link rel="stylesheet" href="/src/index.css" />
   </head>
   <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
     <!-- Checkbox mở/đóng Sidebar trên Mobile -->
@@ -191,7 +191,8 @@
 
         <!-- Main Body -->
         <main class="flex-1 p-4 lg:p-8 max-w-6xl w-full mx-auto space-y-6">
-          <form action="profile.html" method="get" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Form gửi dữ liệu sang thank-you.html -->
+          <form action="thank-you.html" method="get" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <!-- CỘT THÔNG TIN GIAO HÀNG & PHƯƠNG THỨC THANH TOÁN (7 Cột) -->
             <div class="lg:col-span-7 space-y-6">
               <!-- Khối 1: Thông tin sinh viên nhận hàng -->
@@ -207,22 +208,22 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                   <div class="space-y-1">
                     <label for="fullname" class="font-semibold text-slate-700">Họ và tên *</label>
-                    <input type="text" id="fullname" value="Nguyễn Văn An" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    <input type="text" id="fullname" name="fullname" value="Nguyễn Văn An" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                   </div>
 
                   <div class="space-y-1">
                     <label for="phone" class="font-semibold text-slate-700">Số điện thoại *</label>
-                    <input type="tel" id="phone" value="0912 345 678" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    <input type="tel" id="phone" name="phone" value="0912 345 678" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                   </div>
 
                   <div class="space-y-1">
                     <label for="email" class="font-semibold text-slate-700">Email trường / Sinh viên *</label>
-                    <input type="email" id="email" value="an.nguyen24@sinhvien.edu.vn" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    <input type="email" id="email" name="email" value="an.nguyen24@sinhvien.edu.vn" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                   </div>
 
                   <div class="space-y-1">
                     <label for="mssv" class="font-semibold text-slate-700">Mã số sinh viên (MSSV)</label>
-                    <input type="text" id="mssv" value="202412345" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    <input type="text" id="mssv" name="mssv" value="202412345" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                   </div>
                 </div>
               </div>
@@ -258,7 +259,7 @@
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="space-y-1">
                       <label for="dorm-area" class="font-semibold text-slate-700">Khu KTX / Cơ sở trường *</label>
-                      <select id="dorm-area" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                      <select id="dorm-area" name="dorm-area" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500">
                         <option selected>KTX Khu A - ĐHQG TP.HCM (Linh Trung, Thủ Đức)</option>
                         <option>KTX Khu B - ĐHQG TP.HCM (Dĩ An, Bình Dương)</option>
                         <option>KTX ĐH Bách Khoa (Quận 10)</option>
@@ -269,13 +270,13 @@
 
                     <div class="space-y-1">
                       <label for="room-detail" class="font-semibold text-slate-700">Tòa nhà & Số phòng *</label>
-                      <input type="text" id="room-detail" value="Phòng 308 - Tòa A15" required placeholder="VD: Phòng 402, Tòa BA5" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      <input type="text" id="room-detail" name="room-detail" value="Phòng 308 - Tòa A15" required placeholder="VD: Phòng 402, Tòa BA5" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                     </div>
                   </div>
 
                   <div class="space-y-1">
                     <label for="shipping-note" class="font-semibold text-slate-700">Ghi chú cho Shipper giao hàng</label>
-                    <textarea id="shipping-note" rows="2" placeholder="VD: Giao sau 17h chiều hoặc gọi điện khi shipper đến chốt bảo vệ KTX..." class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                    <textarea id="shipping-note" name="shipping-note" rows="2" placeholder="VD: Giao sau 17h chiều hoặc gọi điện khi shipper đến chốt bảo vệ KTX..." class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
                   </div>
                 </div>
               </div>
@@ -392,13 +393,13 @@
                   </label>
                 </div>
 
-                <!-- Nút Xác nhận đặt hàng -->
+                <!-- Nút Xác nhận đặt hàng chuyển đến thank-you.html -->
                 <button type="submit" class="w-full py-3.5 px-4 bg-primary-600 hover:bg-primary-700 text-white rounded-xl text-center font-bold text-sm block transition-colors shadow-xs cursor-pointer">
-                  Xác Nhận Đặt Hàng Ngay
+                  Xác Nhận Đặt Hàng & Thanh Toán Ngay
                 </button>
 
                 <p class="text-center text-[11px] text-slate-400">
-                  Sau khi đặt hàng, bạn sẽ nhận được thông báo theo dõi đơn trong trang cá nhân.
+                  Sau khi xác nhận đặt hàng, hệ thống sẽ hiển thị màn hình cảm ơn và hóa đơn chi tiết.
                 </p>
               </div>
             </div>
