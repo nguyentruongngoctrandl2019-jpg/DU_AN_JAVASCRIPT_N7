@@ -1,1214 +1,411 @@
 {
-    "categories": [
-        {
-            "id": 1,
-            "name": "Điện thoại",
-            "parent_id": null
-        },
-        {
-            "id": 2,
-            "name": "Laptop",
-            "parent_id": null
-        },
-        {
-            "id": 3,
-            "name": "Máy tính bảng",
-            "parent_id": null
-        },
-        {
-            "id": 4,
-            "name": "Đồng hồ thông minh",
-            "parent_id": null
-        },
-        {
-            "id": 5,
-            "name": "Tai nghe",
-            "parent_id": null
-        },
-        {
-            "id": 6,
-            "name": "Phụ kiện",
-            "parent_id": null
-        },
-        {
-            "id": 7,
-            "name": "Màn hình",
-            "parent_id": null
-        },
-        {
-            "id": 8,
-            "name": "Máy ảnh",
-            "parent_id": null
-        },
-        {
-            "id": 9,
-            "name": "Loa",
-            "parent_id": null
-        },
-        {
-            "id": 10,
-            "name": "Thiết bị mạng",
-            "parent_id": null
-        },
-        {
-            "id": 11,
-            "name": "iPhone",
-            "parent_id": 1
-        },
-        {
-            "id": 12,
-            "name": "Samsung Galaxy",
-            "parent_id": 1
-        },
-        {
-            "id": 13,
-            "name": "Xiaomi",
-            "parent_id": 1
-        },
-        {
-            "id": 14,
-            "name": "Laptop Gaming",
-            "parent_id": 2
-        },
-        {
-            "id": 15,
-            "name": "Laptop Văn phòng",
-            "parent_id": 2
-        },
-        {
-            "id": 16,
-            "name": "MacBook",
-            "parent_id": 2
-        },
-        {
-            "id": 17,
-            "name": "iPad",
-            "parent_id": 3
-        },
-        {
-            "id": 18,
-            "name": "Tablet Android",
-            "parent_id": 3
-        },
-        {
-            "id": 19,
-            "name": "Apple Watch",
-            "parent_id": 4
-        },
-        {
-            "id": 20,
-            "name": "Smartwatch Android",
-            "parent_id": 4
-        },
-        {
-            "id": 21,
-            "name": "Tai nghe không dây",
-            "parent_id": 5
-        },
-        {
-            "id": 22,
-            "name": "Tai nghe chụp tai",
-            "parent_id": 5
-        },
-        {
-            "id": 23,
-            "name": "Sạc & Cáp",
-            "parent_id": 6
-        },
-        {
-            "id": 24,
-            "name": "Ốp lưng",
-            "parent_id": 6
-        },
-        {
-            "id": 25,
-            "name": "Màn hình Gaming",
-            "parent_id": 7
-        },
-        {
-            "id": 26,
-            "name": "Màn hình Văn phòng",
-            "parent_id": 7
-        },
-        {
-            "id": 27,
-            "name": "Máy ảnh Mirrorless",
-            "parent_id": 8
-        },
-        {
-            "id": 28,
-            "name": "Loa Bluetooth",
-            "parent_id": 9
-        },
-        {
-            "id": 29,
-            "name": "Router Wifi",
-            "parent_id": 10
-        },
-        {
-            "id": 30,
-            "name": "Balo Laptop",
-            "parent_id": 2
-        }
+  "storeInfo": {
+    "name": "CT Tech Store",
+    "slogan": "Thế Giới Công Nghệ Đỉnh Cao & Chính Hãng",
+    "hotline": "1900 6868",
+    "email": "contact@cttech.vn",
+    "address": "Số 68 Đường Công Nghệ, Cầu Giấy, TP. Hà Nội",
+    "branches": [
+      "Chi nhánh 1: 68 Đường Cầu Giấy, Hà Nội",
+      "Chi nhánh 2: 124 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh",
+      "Chi nhánh 3: 45 Lê Duẩn, Hải Châu, Đà Nẵng"
     ],
-    "products": [
-        {
-            "id": 1,
-            "name": "iPhone 15 Pro Max",
-            "cate_id": 1,
-            "detail": "iPhone 15 Pro Max chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product1/400/400"
-        },
-        {
-            "id": 2,
-            "name": "iPhone 15",
-            "cate_id": 24,
-            "detail": "iPhone 15 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product2/400/400"
-        },
-        {
-            "id": 3,
-            "name": "Samsung Galaxy S24 Ultra",
-            "cate_id": 9,
-            "detail": "Samsung Galaxy S24 Ultra chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product3/400/400"
-        },
-        {
-            "id": 4,
-            "name": "Samsung Galaxy A55",
-            "cate_id": 8,
-            "detail": "Samsung Galaxy A55 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product4/400/400"
-        },
-        {
-            "id": 5,
-            "name": "Xiaomi 14 Pro",
-            "cate_id": 8,
-            "detail": "Xiaomi 14 Pro chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product5/400/400"
-        },
-        {
-            "id": 6,
-            "name": "Xiaomi Redmi Note 13",
-            "cate_id": 5,
-            "detail": "Xiaomi Redmi Note 13 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product6/400/400"
-        },
-        {
-            "id": 7,
-            "name": "MacBook Air M3",
-            "cate_id": 24,
-            "detail": "MacBook Air M3 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product7/400/400"
-        },
-        {
-            "id": 8,
-            "name": "MacBook Pro 16 M3",
-            "cate_id": 4,
-            "detail": "MacBook Pro 16 M3 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product8/400/400"
-        },
-        {
-            "id": 9,
-            "name": "Laptop Dell XPS 13",
-            "cate_id": 22,
-            "detail": "Laptop Dell XPS 13 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product9/400/400"
-        },
-        {
-            "id": 10,
-            "name": "Laptop Asus ROG Strix",
-            "cate_id": 24,
-            "detail": "Laptop Asus ROG Strix chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product10/400/400"
-        },
-        {
-            "id": 11,
-            "name": "Laptop Lenovo ThinkPad X1",
-            "cate_id": 29,
-            "detail": "Laptop Lenovo ThinkPad X1 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product11/400/400"
-        },
-        {
-            "id": 12,
-            "name": "iPad Pro 12.9",
-            "cate_id": 18,
-            "detail": "iPad Pro 12.9 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product12/400/400"
-        },
-        {
-            "id": 13,
-            "name": "iPad Air 5",
-            "cate_id": 3,
-            "detail": "iPad Air 5 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product13/400/400"
-        },
-        {
-            "id": 14,
-            "name": "Samsung Galaxy Tab S9",
-            "cate_id": 19,
-            "detail": "Samsung Galaxy Tab S9 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product14/400/400"
-        },
-        {
-            "id": 15,
-            "name": "Apple Watch Series 9",
-            "cate_id": 14,
-            "detail": "Apple Watch Series 9 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product15/400/400"
-        },
-        {
-            "id": 16,
-            "name": "Apple Watch Ultra 2",
-            "cate_id": 2,
-            "detail": "Apple Watch Ultra 2 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product16/400/400"
-        },
-        {
-            "id": 17,
-            "name": "Samsung Galaxy Watch 6",
-            "cate_id": 1,
-            "detail": "Samsung Galaxy Watch 6 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product17/400/400"
-        },
-        {
-            "id": 18,
-            "name": "AirPods Pro 2",
-            "cate_id": 3,
-            "detail": "AirPods Pro 2 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product18/400/400"
-        },
-        {
-            "id": 19,
-            "name": "Sony WH-1000XM5",
-            "cate_id": 7,
-            "detail": "Sony WH-1000XM5 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product19/400/400"
-        },
-        {
-            "id": 20,
-            "name": "JBL Tune 760NC",
-            "cate_id": 8,
-            "detail": "JBL Tune 760NC chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product20/400/400"
-        },
-        {
-            "id": 21,
-            "name": "Màn hình Dell 27 inch 4K",
-            "cate_id": 17,
-            "detail": "Màn hình Dell 27 inch 4K chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product21/400/400"
-        },
-        {
-            "id": 22,
-            "name": "Màn hình LG UltraGear 27GP850",
-            "cate_id": 20,
-            "detail": "Màn hình LG UltraGear 27GP850 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product22/400/400"
-        },
-        {
-            "id": 23,
-            "name": "Máy ảnh Sony Alpha A7 IV",
-            "cate_id": 1,
-            "detail": "Máy ảnh Sony Alpha A7 IV chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product23/400/400"
-        },
-        {
-            "id": 24,
-            "name": "Máy ảnh Canon EOS R50",
-            "cate_id": 18,
-            "detail": "Máy ảnh Canon EOS R50 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product24/400/400"
-        },
-        {
-            "id": 25,
-            "name": "Loa Bluetooth JBL Charge 5",
-            "cate_id": 7,
-            "detail": "Loa Bluetooth JBL Charge 5 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product25/400/400"
-        },
-        {
-            "id": 26,
-            "name": "Router Wifi 6 TP-Link Archer AX73",
-            "cate_id": 23,
-            "detail": "Router Wifi 6 TP-Link Archer AX73 chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product26/400/400"
-        },
-        {
-            "id": 27,
-            "name": "Bàn phím cơ Logitech G Pro",
-            "cate_id": 21,
-            "detail": "Bàn phím cơ Logitech G Pro chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product27/400/400"
-        },
-        {
-            "id": 28,
-            "name": "Chuột Logitech MX Master 3S",
-            "cate_id": 23,
-            "detail": "Chuột Logitech MX Master 3S chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product28/400/400"
-        },
-        {
-            "id": 29,
-            "name": "Ổ cứng SSD Samsung 990 Pro 1TB",
-            "cate_id": 18,
-            "detail": "Ổ cứng SSD Samsung 990 Pro 1TB chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product29/400/400"
-        },
-        {
-            "id": 30,
-            "name": "Sạc dự phòng Anker 20000mAh",
-            "cate_id": 14,
-            "detail": "Sạc dự phòng Anker 20000mAh chính hãng, bảo hành 12 tháng, hiệu năng mạnh mẽ, thiết kế hiện đại, phù hợp cho công việc và giải trí.",
-            "image": "https://picsum.photos/seed/product30/400/400"
-        }
-    ],
-    "product_variants": [
-        {
-            "id": 1,
-            "product_id": 8,
-            "variant_name": "Wifi",
-            "price": 45990000,
-            "quantity": 35,
-            "image": "https://picsum.photos/seed/variant1/400/400"
-        },
-        {
-            "id": 2,
-            "product_id": 26,
-            "variant_name": "128GB - Đen",
-            "price": 6990000,
-            "quantity": 89,
-            "image": "https://picsum.photos/seed/variant2/400/400"
-        },
-        {
-            "id": 3,
-            "product_id": 14,
-            "variant_name": "Standard",
-            "price": 12990000,
-            "quantity": 19,
-            "image": "https://picsum.photos/seed/variant3/400/400"
-        },
-        {
-            "id": 4,
-            "product_id": 7,
-            "variant_name": "Standard",
-            "price": 4990000,
-            "quantity": 11,
-            "image": "https://picsum.photos/seed/variant4/400/400"
-        },
-        {
-            "id": 5,
-            "product_id": 13,
-            "variant_name": "256GB - Trắng",
-            "price": 15990000,
-            "quantity": 44,
-            "image": "https://picsum.photos/seed/variant5/400/400"
-        },
-        {
-            "id": 6,
-            "product_id": 20,
-            "variant_name": "16GB/512GB - Xám",
-            "price": 2990000,
-            "quantity": 93,
-            "image": "https://picsum.photos/seed/variant6/400/400"
-        },
-        {
-            "id": 7,
-            "product_id": 15,
-            "variant_name": "Wifi + Cellular",
-            "price": 4990000,
-            "quantity": 48,
-            "image": "https://picsum.photos/seed/variant7/400/400"
-        },
-        {
-            "id": 8,
-            "product_id": 3,
-            "variant_name": "Wifi + Cellular",
-            "price": 12990000,
-            "quantity": 80,
-            "image": "https://picsum.photos/seed/variant8/400/400"
-        },
-        {
-            "id": 9,
-            "product_id": 20,
-            "variant_name": "Standard",
-            "price": 45990000,
-            "quantity": 24,
-            "image": "https://picsum.photos/seed/variant9/400/400"
-        },
-        {
-            "id": 10,
-            "product_id": 23,
-            "variant_name": "256GB - Trắng",
-            "price": 2990000,
-            "quantity": 84,
-            "image": "https://picsum.photos/seed/variant10/400/400"
-        },
-        {
-            "id": 11,
-            "product_id": 8,
-            "variant_name": "16GB/512GB - Xám",
-            "price": 4990000,
-            "quantity": 29,
-            "image": "https://picsum.photos/seed/variant11/400/400"
-        },
-        {
-            "id": 12,
-            "product_id": 28,
-            "variant_name": "256GB - Trắng",
-            "price": 19990000,
-            "quantity": 35,
-            "image": "https://picsum.photos/seed/variant12/400/400"
-        },
-        {
-            "id": 13,
-            "product_id": 15,
-            "variant_name": "GPS + LTE",
-            "price": 15990000,
-            "quantity": 20,
-            "image": "https://picsum.photos/seed/variant13/400/400"
-        },
-        {
-            "id": 14,
-            "product_id": 12,
-            "variant_name": "Standard",
-            "price": 9990000,
-            "quantity": 85,
-            "image": "https://picsum.photos/seed/variant14/400/400"
-        },
-        {
-            "id": 15,
-            "product_id": 9,
-            "variant_name": "GPS + LTE",
-            "price": 4990000,
-            "quantity": 77,
-            "image": "https://picsum.photos/seed/variant15/400/400"
-        },
-        {
-            "id": 16,
-            "product_id": 21,
-            "variant_name": "512GB - Xanh",
-            "price": 32990000,
-            "quantity": 93,
-            "image": "https://picsum.photos/seed/variant16/400/400"
-        },
-        {
-            "id": 17,
-            "product_id": 8,
-            "variant_name": "512GB - Xanh",
-            "price": 24990000,
-            "quantity": 48,
-            "image": "https://picsum.photos/seed/variant17/400/400"
-        },
-        {
-            "id": 18,
-            "product_id": 9,
-            "variant_name": "GPS + LTE",
-            "price": 32990000,
-            "quantity": 28,
-            "image": "https://picsum.photos/seed/variant18/400/400"
-        },
-        {
-            "id": 19,
-            "product_id": 22,
-            "variant_name": "Standard",
-            "price": 2990000,
-            "quantity": 29,
-            "image": "https://picsum.photos/seed/variant19/400/400"
-        },
-        {
-            "id": 20,
-            "product_id": 27,
-            "variant_name": "128GB - Đen",
-            "price": 15990000,
-            "quantity": 51,
-            "image": "https://picsum.photos/seed/variant20/400/400"
-        },
-        {
-            "id": 21,
-            "product_id": 9,
-            "variant_name": "256GB - Trắng",
-            "price": 9990000,
-            "quantity": 72,
-            "image": "https://picsum.photos/seed/variant21/400/400"
-        },
-        {
-            "id": 22,
-            "product_id": 29,
-            "variant_name": "Standard",
-            "price": 9990000,
-            "quantity": 83,
-            "image": "https://picsum.photos/seed/variant22/400/400"
-        },
-        {
-            "id": 23,
-            "product_id": 16,
-            "variant_name": "Pro",
-            "price": 24990000,
-            "quantity": 18,
-            "image": "https://picsum.photos/seed/variant23/400/400"
-        },
-        {
-            "id": 24,
-            "product_id": 9,
-            "variant_name": "512GB - Xanh",
-            "price": 9990000,
-            "quantity": 95,
-            "image": "https://picsum.photos/seed/variant24/400/400"
-        },
-        {
-            "id": 25,
-            "product_id": 18,
-            "variant_name": "Wifi + Cellular",
-            "price": 12990000,
-            "quantity": 95,
-            "image": "https://picsum.photos/seed/variant25/400/400"
-        },
-        {
-            "id": 26,
-            "product_id": 19,
-            "variant_name": "Pro",
-            "price": 45990000,
-            "quantity": 51,
-            "image": "https://picsum.photos/seed/variant26/400/400"
-        },
-        {
-            "id": 27,
-            "product_id": 12,
-            "variant_name": "8GB/256GB - Bạc",
-            "price": 6990000,
-            "quantity": 65,
-            "image": "https://picsum.photos/seed/variant27/400/400"
-        },
-        {
-            "id": 28,
-            "product_id": 16,
-            "variant_name": "256GB - Trắng",
-            "price": 2990000,
-            "quantity": 14,
-            "image": "https://picsum.photos/seed/variant28/400/400"
-        },
-        {
-            "id": 29,
-            "product_id": 5,
-            "variant_name": "GPS + LTE",
-            "price": 6990000,
-            "quantity": 87,
-            "image": "https://picsum.photos/seed/variant29/400/400"
-        },
-        {
-            "id": 30,
-            "product_id": 14,
-            "variant_name": "GPS",
-            "price": 4990000,
-            "quantity": 49,
-            "image": "https://picsum.photos/seed/variant30/400/400"
-        }
-    ],
-    "orders": [
-        {
-            "id": 1,
-            "user_id": 5,
-            "created_date": "2026-05-13",
-            "status": "shipping"
-        },
-        {
-            "id": 2,
-            "user_id": 30,
-            "created_date": "2026-08-11",
-            "status": "pending"
-        },
-        {
-            "id": 3,
-            "user_id": 20,
-            "created_date": "2026-01-15",
-            "status": "cancelled"
-        },
-        {
-            "id": 4,
-            "user_id": 18,
-            "created_date": "2026-02-03",
-            "status": "confirmed"
-        },
-        {
-            "id": 5,
-            "user_id": 5,
-            "created_date": "2026-09-09",
-            "status": "shipping"
-        },
-        {
-            "id": 6,
-            "user_id": 12,
-            "created_date": "2026-02-08",
-            "status": "shipping"
-        },
-        {
-            "id": 7,
-            "user_id": 27,
-            "created_date": "2026-03-15",
-            "status": "cancelled"
-        },
-        {
-            "id": 8,
-            "user_id": 26,
-            "created_date": "2026-05-20",
-            "status": "cancelled"
-        },
-        {
-            "id": 9,
-            "user_id": 27,
-            "created_date": "2026-01-22",
-            "status": "cancelled"
-        },
-        {
-            "id": 10,
-            "user_id": 4,
-            "created_date": "2026-05-22",
-            "status": "confirmed"
-        },
-        {
-            "id": 11,
-            "user_id": 29,
-            "created_date": "2026-05-04",
-            "status": "pending"
-        },
-        {
-            "id": 12,
-            "user_id": 9,
-            "created_date": "2026-09-05",
-            "status": "shipping"
-        },
-        {
-            "id": 13,
-            "user_id": 11,
-            "created_date": "2026-04-23",
-            "status": "confirmed"
-        },
-        {
-            "id": 14,
-            "user_id": 16,
-            "created_date": "2026-05-17",
-            "status": "shipping"
-        },
-        {
-            "id": 15,
-            "user_id": 21,
-            "created_date": "2026-01-03",
-            "status": "completed"
-        },
-        {
-            "id": 16,
-            "user_id": 1,
-            "created_date": "2026-05-02",
-            "status": "shipping"
-        },
-        {
-            "id": 17,
-            "user_id": 9,
-            "created_date": "2026-03-21",
-            "status": "confirmed"
-        },
-        {
-            "id": 18,
-            "user_id": 23,
-            "created_date": "2026-08-18",
-            "status": "completed"
-        },
-        {
-            "id": 19,
-            "user_id": 4,
-            "created_date": "2026-09-01",
-            "status": "pending"
-        },
-        {
-            "id": 20,
-            "user_id": 2,
-            "created_date": "2026-03-18",
-            "status": "shipping"
-        },
-        {
-            "id": 21,
-            "user_id": 14,
-            "created_date": "2026-09-05",
-            "status": "confirmed"
-        },
-        {
-            "id": 22,
-            "user_id": 12,
-            "created_date": "2026-01-10",
-            "status": "pending"
-        },
-        {
-            "id": 23,
-            "user_id": 22,
-            "created_date": "2026-06-07",
-            "status": "confirmed"
-        },
-        {
-            "id": 24,
-            "user_id": 25,
-            "created_date": "2026-02-12",
-            "status": "cancelled"
-        },
-        {
-            "id": 25,
-            "user_id": 24,
-            "created_date": "2026-07-20",
-            "status": "confirmed"
-        },
-        {
-            "id": 26,
-            "user_id": 6,
-            "created_date": "2026-04-28",
-            "status": "confirmed"
-        },
-        {
-            "id": 27,
-            "user_id": 6,
-            "created_date": "2026-07-01",
-            "status": "shipping"
-        },
-        {
-            "id": 28,
-            "user_id": 22,
-            "created_date": "2026-07-26",
-            "status": "confirmed"
-        },
-        {
-            "id": 29,
-            "user_id": 26,
-            "created_date": "2026-05-06",
-            "status": "pending"
-        },
-        {
-            "id": 30,
-            "user_id": 2,
-            "created_date": "2026-07-28",
-            "status": "completed"
-        }
-    ],
-    "order_details": [
-        {
-            "id": 1,
-            "order_id": 27,
-            "product_id": 30,
-            "quantity": 2,
-            "unit_price": 9990000
-        },
-        {
-            "id": 2,
-            "order_id": 10,
-            "product_id": 27,
-            "quantity": 4,
-            "unit_price": 15990000
-        },
-        {
-            "id": 3,
-            "order_id": 1,
-            "product_id": 22,
-            "quantity": 2,
-            "unit_price": 9990000
-        },
-        {
-            "id": 4,
-            "order_id": 11,
-            "product_id": 9,
-            "quantity": 2,
-            "unit_price": 19990000
-        },
-        {
-            "id": 5,
-            "order_id": 12,
-            "product_id": 21,
-            "quantity": 1,
-            "unit_price": 12990000
-        },
-        {
-            "id": 6,
-            "order_id": 22,
-            "product_id": 27,
-            "quantity": 5,
-            "unit_price": 19990000
-        },
-        {
-            "id": 7,
-            "order_id": 1,
-            "product_id": 4,
-            "quantity": 5,
-            "unit_price": 15990000
-        },
-        {
-            "id": 8,
-            "order_id": 19,
-            "product_id": 9,
-            "quantity": 3,
-            "unit_price": 6990000
-        },
-        {
-            "id": 9,
-            "order_id": 20,
-            "product_id": 14,
-            "quantity": 1,
-            "unit_price": 4990000
-        },
-        {
-            "id": 10,
-            "order_id": 14,
-            "product_id": 20,
-            "quantity": 3,
-            "unit_price": 15990000
-        },
-        {
-            "id": 11,
-            "order_id": 13,
-            "product_id": 29,
-            "quantity": 5,
-            "unit_price": 4990000
-        },
-        {
-            "id": 12,
-            "order_id": 9,
-            "product_id": 2,
-            "quantity": 5,
-            "unit_price": 9990000
-        },
-        {
-            "id": 13,
-            "order_id": 17,
-            "product_id": 30,
-            "quantity": 4,
-            "unit_price": 2990000
-        },
-        {
-            "id": 14,
-            "order_id": 12,
-            "product_id": 14,
-            "quantity": 5,
-            "unit_price": 9990000
-        },
-        {
-            "id": 15,
-            "order_id": 20,
-            "product_id": 11,
-            "quantity": 1,
-            "unit_price": 15990000
-        },
-        {
-            "id": 16,
-            "order_id": 17,
-            "product_id": 10,
-            "quantity": 1,
-            "unit_price": 12990000
-        },
-        {
-            "id": 17,
-            "order_id": 13,
-            "product_id": 23,
-            "quantity": 4,
-            "unit_price": 15990000
-        },
-        {
-            "id": 18,
-            "order_id": 5,
-            "product_id": 7,
-            "quantity": 3,
-            "unit_price": 32990000
-        },
-        {
-            "id": 19,
-            "order_id": 22,
-            "product_id": 24,
-            "quantity": 4,
-            "unit_price": 19990000
-        },
-        {
-            "id": 20,
-            "order_id": 19,
-            "product_id": 10,
-            "quantity": 2,
-            "unit_price": 45990000
-        },
-        {
-            "id": 21,
-            "order_id": 27,
-            "product_id": 1,
-            "quantity": 4,
-            "unit_price": 32990000
-        },
-        {
-            "id": 22,
-            "order_id": 7,
-            "product_id": 14,
-            "quantity": 3,
-            "unit_price": 12990000
-        },
-        {
-            "id": 23,
-            "order_id": 21,
-            "product_id": 11,
-            "quantity": 5,
-            "unit_price": 45990000
-        },
-        {
-            "id": 24,
-            "order_id": 15,
-            "product_id": 22,
-            "quantity": 4,
-            "unit_price": 24990000
-        },
-        {
-            "id": 25,
-            "order_id": 16,
-            "product_id": 26,
-            "quantity": 2,
-            "unit_price": 32990000
-        },
-        {
-            "id": 26,
-            "order_id": 10,
-            "product_id": 17,
-            "quantity": 2,
-            "unit_price": 4990000
-        },
-        {
-            "id": 27,
-            "order_id": 3,
-            "product_id": 27,
-            "quantity": 5,
-            "unit_price": 15990000
-        },
-        {
-            "id": 28,
-            "order_id": 8,
-            "product_id": 26,
-            "quantity": 2,
-            "unit_price": 12990000
-        },
-        {
-            "id": 29,
-            "order_id": 1,
-            "product_id": 2,
-            "quantity": 2,
-            "unit_price": 6990000
-        },
-        {
-            "id": 30,
-            "order_id": 20,
-            "product_id": 28,
-            "quantity": 2,
-            "unit_price": 24990000
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "Đặng Văn Yến",
-            "email": "user1@gmail.com",
-            "phone": "0972820592",
-            "address": "Số 136 đường Nguyễn Huệ, Hà Nội"
-        },
-        {
-            "id": 2,
-            "name": "Trần Thị Uyên",
-            "email": "user2@gmail.com",
-            "phone": "0945812670",
-            "address": "Số 197 đường Nguyễn Huệ, TP. Hồ Chí Minh"
-        },
-        {
-            "id": 3,
-            "name": "Hoàng Văn Phúc",
-            "email": "user3@gmail.com",
-            "phone": "0931227574",
-            "address": "Số 117 đường Lê Lợi, Hải Phòng"
-        },
-        {
-            "id": 4,
-            "name": "Đỗ Văn Giang",
-            "email": "user4@gmail.com",
-            "phone": "0978139880",
-            "address": "Số 28 đường Nguyễn Huệ, Cần Thơ"
-        },
-        {
-            "id": 5,
-            "name": "Lê Văn Nam",
-            "email": "user5@gmail.com",
-            "phone": "0931682744",
-            "address": "Số 139 đường Điện Biên Phủ, Hà Nội"
-        },
-        {
-            "id": 6,
-            "name": "Ngô Thị Minh",
-            "email": "user6@gmail.com",
-            "phone": "0975579548",
-            "address": "Số 5 đường Lê Lợi, Nha Trang"
-        },
-        {
-            "id": 7,
-            "name": "Hoàng Văn Huy",
-            "email": "user7@gmail.com",
-            "phone": "0917774584",
-            "address": "Số 62 đường Điện Biên Phủ, TP. Hồ Chí Minh"
-        },
-        {
-            "id": 8,
-            "name": "Trần Thị Sơn",
-            "email": "user8@gmail.com",
-            "phone": "0919289546",
-            "address": "Số 195 đường Điện Biên Phủ, Đà Nẵng"
-        },
-        {
-            "id": 9,
-            "name": "Lê Văn Sơn",
-            "email": "user9@gmail.com",
-            "phone": "0983793389",
-            "address": "Số 43 đường Nguyễn Huệ, Huế"
-        },
-        {
-            "id": 10,
-            "name": "Phạm Thị Uyên",
-            "email": "user10@gmail.com",
-            "phone": "0936998038",
-            "address": "Số 183 đường Nguyễn Huệ, Huế"
-        },
-        {
-            "id": 11,
-            "name": "Vũ Thị Quân",
-            "email": "user11@gmail.com",
-            "phone": "0979467853",
-            "address": "Số 116 đường Lê Lợi, Cần Thơ"
-        },
-        {
-            "id": 12,
-            "name": "Phạm Thị Cường",
-            "email": "user12@gmail.com",
-            "phone": "0955377076",
-            "address": "Số 6 đường Điện Biên Phủ, Cần Thơ"
-        },
-        {
-            "id": 13,
-            "name": "Ngô Thị Huy",
-            "email": "user13@gmail.com",
-            "phone": "0910965138",
-            "address": "Số 19 đường Lê Lợi, Cần Thơ"
-        },
-        {
-            "id": 14,
-            "name": "Trần Thị Bình",
-            "email": "user14@gmail.com",
-            "phone": "0954349361",
-            "address": "Số 19 đường Điện Biên Phủ, Cần Thơ"
-        },
-        {
-            "id": 15,
-            "name": "Hoàng Văn Sơn",
-            "email": "user15@gmail.com",
-            "phone": "0938754377",
-            "address": "Số 139 đường Trần Hưng Đạo, Vũng Tàu"
-        },
-        {
-            "id": 16,
-            "name": "Phạm Thị Sơn",
-            "email": "user16@gmail.com",
-            "phone": "0964634663",
-            "address": "Số 49 đường Lê Lợi, TP. Hồ Chí Minh"
-        },
-        {
-            "id": 17,
-            "name": "Đặng Văn Nam",
-            "email": "user17@gmail.com",
-            "phone": "0966851760",
-            "address": "Số 106 đường Hai Bà Trưng, Hà Nội"
-        },
-        {
-            "id": 18,
-            "name": "Trần Thị Bình",
-            "email": "user18@gmail.com",
-            "phone": "0964038913",
-            "address": "Số 187 đường Nguyễn Huệ, TP. Hồ Chí Minh"
-        },
-        {
-            "id": 19,
-            "name": "Phạm Thị Hoa",
-            "email": "user19@gmail.com",
-            "phone": "0935529407",
-            "address": "Số 138 đường Hai Bà Trưng, Đà Nẵng"
-        },
-        {
-            "id": 20,
-            "name": "Đặng Văn Giang",
-            "email": "user20@gmail.com",
-            "phone": "0947385696",
-            "address": "Số 119 đường Trần Hưng Đạo, TP. Hồ Chí Minh"
-        },
-        {
-            "id": 21,
-            "name": "Bùi Thị Uyên",
-            "email": "user21@gmail.com",
-            "phone": "0923141087",
-            "address": "Số 13 đường Điện Biên Phủ, Hà Nội"
-        },
-        {
-            "id": 22,
-            "name": "Trần Thị Huy",
-            "email": "user22@gmail.com",
-            "phone": "0932321899",
-            "address": "Số 105 đường Hai Bà Trưng, Vũng Tàu"
-        },
-        {
-            "id": 23,
-            "name": "Phạm Thị Oanh",
-            "email": "user23@gmail.com",
-            "phone": "0917869910",
-            "address": "Số 43 đường Hai Bà Trưng, Hà Nội"
-        },
-        {
-            "id": 24,
-            "name": "Đặng Văn Khánh",
-            "email": "user24@gmail.com",
-            "phone": "0971070189",
-            "address": "Số 74 đường Hai Bà Trưng, Vũng Tàu"
-        },
-        {
-            "id": 25,
-            "name": "Lê Văn Hoa",
-            "email": "user25@gmail.com",
-            "phone": "0949823450",
-            "address": "Số 56 đường Lê Lợi, Hà Nội"
-        },
-        {
-            "id": 26,
-            "name": "Vũ Thị Bình",
-            "email": "user26@gmail.com",
-            "phone": "0916729990",
-            "address": "Số 150 đường Hai Bà Trưng, Đà Nẵng"
-        },
-        {
-            "id": 27,
-            "name": "Nguyễn Văn Trang",
-            "email": "user27@gmail.com",
-            "phone": "0920752378",
-            "address": "Số 48 đường Lê Lợi, TP. Hồ Chí Minh"
-        },
-        {
-            "id": 28,
-            "name": "Phạm Thị Oanh",
-            "email": "user28@gmail.com",
-            "phone": "0926090908",
-            "address": "Số 146 đường Trần Hưng Đạo, Hà Nội"
-        },
-        {
-            "id": 29,
-            "name": "Ngô Thị Cường",
-            "email": "user29@gmail.com",
-            "phone": "0966267415",
-            "address": "Số 169 đường Điện Biên Phủ, Nha Trang"
-        },
-        {
-            "id": 30,
-            "name": "Hoàng Văn Hoa",
-            "email": "user30@gmail.com",
-            "phone": "0999889098",
-            "address": "Số 184 đường Nguyễn Huệ, Cần Thơ"
-        }
-    ]
+    "bankInfo": {
+      "bankName": "MB Bank (Ngân hàng Quân Đội)",
+      "accountNumber": "038686868999",
+      "accountName": "CT TECH STORE VIETNAM",
+      "branch": "Chi nhánh Hà Nội"
+    }
+  },
+  "categories": [
+    { "id": "all", "name": "Tất cả sản phẩm", "icon": "grid" },
+    { "id": "phone", "name": "Điện thoại", "icon": "smartphone" },
+    { "id": "laptop", "name": "Laptop & MacBook", "icon": "laptop" },
+    { "id": "tablet", "name": "Máy tính bảng", "icon": "tablet" },
+    { "id": "smartwatch", "name": "Đồng hồ thông minh", "icon": "watch" },
+    { "id": "audio", "name": "Âm thanh & Tai nghe", "icon": "headphones" },
+    { "id": "accessory", "name": "Phụ kiện cao cấp", "icon": "cpu" }
+  ],
+  "products": [
+    {
+      "id": "ct-001",
+      "name": "iPhone 16 Pro Max 256GB",
+      "category": "phone",
+      "categoryName": "Điện thoại",
+      "brand": "Apple",
+      "price": 34990000,
+      "oldPrice": 37990000,
+      "discount": 8,
+      "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 184,
+      "inStock": true,
+      "stockCount": 35,
+      "isFeatured": true,
+      "isFlashSale": true,
+      "badge": "Flagship 2026",
+      "colors": ["Titan Sa Mạc", "Titan Tự Nhiên", "Titan Đen", "Titan Trắng"],
+      "storageOptions": ["256GB", "512GB", "1TB"],
+      "description": "iPhone 16 Pro Max với khung viền Titanium chuẩn hàng không vũ trụ, chip Apple A18 Pro 3nm vượt trội, nút điều khiển Camera Control thông minh và thời lượng pin dẫn đầu phân khúc.",
+      "specs": {
+        "Màn hình": "6.9 inch Super Retina XDR OLED, 120Hz ProMotion",
+        "Vi xử lý": "Apple A18 Pro (3nm thế hệ thứ 2)",
+        "Bộ nhớ RAM": "8GB LPDDR5X",
+        "Camera sau": "Chính 48MP + Góc siêu rộng 48MP + Telephoto 5x 12MP",
+        "Camera trước": "12MP TrueDepth, Autofocus",
+        "Pin & Sạc": "4.685 mAh, Sạc nhanh 30W, MagSafe 25W",
+        "Hệ điều hành": "iOS 18 (Hỗ trợ Apple Intelligence)",
+        "Trọng lượng": "227g"
+      }
+    },
+    {
+      "id": "ct-002",
+      "name": "MacBook Pro 16 inch M3 Max",
+      "category": "laptop",
+      "categoryName": "Laptop & MacBook",
+      "brand": "Apple",
+      "price": 79990000,
+      "oldPrice": 84990000,
+      "discount": 6,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 5.0,
+      "reviewsCount": 92,
+      "inStock": true,
+      "stockCount": 18,
+      "isFeatured": true,
+      "isFlashSale": false,
+      "badge": "Pro Workstation",
+      "colors": ["Space Black (Đen Không Gian)", "Silver (Bạc)"],
+      "storageOptions": ["36GB / 512GB", "48GB / 1TB", "128GB / 2TB"],
+      "description": "Sức mạnh đồ họa đỉnh cao với vi xử lý Apple M3 Max 16-core CPU, 40-core GPU. Màn hình Liquid Retina XDR 120Hz tái hiện dải tương phản động ấn tượng và thời lượng pin lên đến 22 giờ.",
+      "specs": {
+        "Màn hình": "16.2 inch Liquid Retina XDR (3456 x 2234), 1600 nits đỉnh, 120Hz",
+        "Vi xử lý": "Apple M3 Max (16-core CPU, 40-core GPU)",
+        "Bộ nhớ RAM": "48GB Unified Memory",
+        "Ổ cứng": "1TB PCIe NVMe SSD siêu tốc",
+        "Cổng kết nối": "3x Thunderbolt 4, HDMI, SDXC, MagSafe 3",
+        "Thời lượng pin": "Lên tới 22 giờ phát video",
+        "Trọng lượng": "2.16 kg"
+      }
+    },
+    {
+      "id": "ct-003",
+      "name": "Samsung Galaxy S24 Ultra 5G",
+      "category": "phone",
+      "categoryName": "Điện thoại",
+      "brand": "Samsung",
+      "price": 28990000,
+      "oldPrice": 33990000,
+      "discount": 15,
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.8,
+      "reviewsCount": 142,
+      "inStock": true,
+      "stockCount": 40,
+      "isFeatured": true,
+      "isFlashSale": true,
+      "badge": "Galaxy AI",
+      "colors": ["Xám Titan", "Đen Titan", "Tím Titan", "Vàng Titan"],
+      "storageOptions": ["256GB", "512GB", "1TB"],
+      "description": "Siêu phẩm Galaxy S24 Ultra mở ra kỷ nguyên Galaxy AI thông minh toàn diện, bút S-Pen quyền năng, khung viền Titanium và camera mắt thần bóng đêm 200MP zoom quang 100x.",
+      "specs": {
+        "Màn hình": "6.8 inch Dynamic AMOLED 2X, QHD+, 2600 nits, 120Hz",
+        "Vi xử lý": "Snapdragon 8 Gen 3 for Galaxy (4nm)",
+        "Bộ nhớ RAM": "12GB",
+        "Camera sau": "200MP Chính + 50MP Periscope 5x + 12MP Ultra-wide + 10MP 3x",
+        "Pin & Sạc": "5.000 mAh, Sạc siêu nhanh 45W",
+        "Tính năng": "Tích hợp Bút S-Pen, Kháng nước IP68, Trí tuệ Galaxy AI"
+      }
+    },
+    {
+      "id": "ct-004",
+      "name": "Sony WH-1000XM5 Wireless Headphones",
+      "category": "audio",
+      "categoryName": "Âm thanh & Tai nghe",
+      "brand": "Sony",
+      "price": 7490000,
+      "oldPrice": 8990000,
+      "discount": 17,
+      "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 210,
+      "inStock": true,
+      "stockCount": 60,
+      "isFeatured": true,
+      "isFlashSale": true,
+      "badge": "Chống ồn số 1",
+      "colors": ["Đen Huyền Bí", "Bạc Bạch Kim", "Xanh Midnight"],
+      "storageOptions": ["Bản Tiêu Chuẩn"],
+      "description": "Tai nghe chống ồn chủ động đỉnh cao số 1 thế giới với 2 bộ xử lý chuyên dụng V1 & QN1, màng loa carbon 30mm cho chất âm Hi-Res Audio tinh khiết cùng 30 giờ nghe nhạc liên tục.",
+      "specs": {
+        "Chống ồn": "Công nghệ chống ồn ANC với 8 micro kép",
+        "Thời lượng pin": "30 giờ (bật ANC), sạc 3 phút dùng 3 giờ",
+        "Bộ giải mã âm thanh": "LDAC, AAC, SBC (Hi-Res Audio Wireless)",
+        "Kết nối": "Bluetooth 5.2 đa điểm, Jack 3.5mm",
+        "Trọng lượng": "250g siêu nhẹ êm ái"
+      }
+    },
+    {
+      "id": "ct-005",
+      "name": "iPad Pro 13 inch M4 Ultra-Thin",
+      "category": "tablet",
+      "categoryName": "Máy tính bảng",
+      "brand": "Apple",
+      "price": 36990000,
+      "oldPrice": 39990000,
+      "discount": 8,
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 78,
+      "inStock": true,
+      "stockCount": 22,
+      "isFeatured": true,
+      "isFlashSale": false,
+      "badge": "Mỏng nhất lịch sử",
+      "colors": ["Đen Không Gian", "Bạc Ánh Kim"],
+      "storageOptions": ["256GB", "512GB", "1TB"],
+      "description": "Thiết bị mỏng nhất Apple từng tạo ra (5.1mm). Tấm nền màn hình Ultra Retina XDR Tandem OLED đột phá cùng sức mạnh chip Apple M4 thế hệ kế tiếp chuyên xử lý AI thần tốc.",
+      "specs": {
+        "Màn hình": "13 inch Tandem OLED (2752 x 2064), 1000 nits toàn màn hình, 120Hz",
+        "Vi xử lý": "Apple M4 (9-core CPU, 10-core GPU, 16-core Neural Engine)",
+        "Hỗ trợ phụ kiện": "Apple Pencil Pro, Magic Keyboard 2024",
+        "Độ dày": "5.1 mm",
+        "Trọng lượng": "579g"
+      }
+    },
+    {
+      "id": "ct-006",
+      "name": "Apple Watch Ultra 2 Titanium GPS + LTE",
+      "category": "smartwatch",
+      "categoryName": "Đồng hồ thông minh",
+      "brand": "Apple",
+      "price": 20490000,
+      "oldPrice": 22490000,
+      "discount": 9,
+      "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 95,
+      "inStock": true,
+      "stockCount": 28,
+      "isFeatured": false,
+      "isFlashSale": true,
+      "badge": "Khám Phá Cực Hạn",
+      "colors": ["Titan Tự Nhiên Dây Vải Trail", "Dây Ocean Cam", "Dây Alpine Xanh"],
+      "storageOptions": ["49mm GPS + Cellular 64GB"],
+      "description": "Vỏ titan 49mm chống va đập tiêu chuẩn quân đội, màn hình sáng nhất 3000 nits, cảm biến đo độ sâu lặn biển 40m, GPS băng tần kép chính xác cao và pin dùng tới 72 giờ ở chế độ tiết kiệm.",
+      "specs": {
+        "Màn hình": "Always-On Retina OLED, độ sáng 3000 nits",
+        "Chất liệu": "Titanium cấp độ hàng không vũ trụ",
+        "Kháng nước": "WR100 (lặn sâu đến 40 mét theo chuẩn EN13319)",
+        "Pin": "36 giờ sử dụng thông thường, 72 giờ tiết kiệm pin",
+        "Tính năng": "Còi báo động 86dB, ECG điện tâm đồ, SpO2, Cảm biến nhiệt độ"
+      }
+    },
+    {
+      "id": "ct-007",
+      "name": "Laptop Gaming ASUS ROG Zephyrus G16 (2024)",
+      "category": "laptop",
+      "categoryName": "Laptop & MacBook",
+      "brand": "ASUS",
+      "price": 58990000,
+      "oldPrice": 62990000,
+      "discount": 6,
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.8,
+      "reviewsCount": 63,
+      "inStock": true,
+      "stockCount": 15,
+      "isFeatured": true,
+      "isFlashSale": false,
+      "badge": "Gaming OLED",
+      "colors": ["Eclipse Gray", "Platinum White"],
+      "storageOptions": ["32GB RAM / 1TB SSD"],
+      "description": "Thiết kế nhôm nguyên khối siêu mỏng chỉ 1.49cm, trang bị màn hình ROG Nebula OLED 2.5K 240Hz sắc nét tuyệt mỹ, vi xử lý Intel Core Ultra 9 và card đồ họa NVIDIA GeForce RTX 4080.",
+      "specs": {
+        "Màn hình": "16 inch 2.5K (2560 x 1600) OLED 240Hz, 0.2ms, G-Sync, 100% DCI-P3",
+        "CPU": "Intel Core Ultra 9 185H (16 nhân, 22 luồng, NPU AI tích hợp)",
+        "GPU": "NVIDIA GeForce RTX 4080 12GB GDDR6 (115W TGP)",
+        "RAM & SSD": "32GB LPDDR5X 7467MHz + 1TB PCIe 4.0 NVMe",
+        "Độ mỏng": "1.49 cm, trọng lượng 1.85 kg"
+      }
+    },
+    {
+      "id": "ct-008",
+      "name": "Tai nghe Apple AirPods Pro 2 USB-C",
+      "category": "audio",
+      "categoryName": "Âm thanh & Tai nghe",
+      "brand": "Apple",
+      "price": 5490000,
+      "oldPrice": 6190000,
+      "discount": 11,
+      "image": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 312,
+      "inStock": true,
+      "stockCount": 85,
+      "isFeatured": false,
+      "isFlashSale": true,
+      "badge": "Âm thanh vòm",
+      "colors": ["Trắng Chuẩn Apple"],
+      "storageOptions": ["Hộp sạc MagSafe USB-C"],
+      "description": "Chip Apple H2 khử tiếng ồn chủ động gấp 2 lần, chế độ Âm thanh thích ứng (Adaptive Audio) thông minh tự điều chỉnh theo môi trường và chuẩn kháng bụi nước IP54 cho cả tai và hộp sạc.",
+      "specs": {
+        "Vi xử lý": "Apple H2 trong tai nghe, Apple U1 trong hộp sạc",
+        "Chống ồn": "Chống ồn chủ động ANC & Xuyên âm Adaptive Transparency",
+        "Pin": "6 giờ (1 lần sạc), 30 giờ (kèm hộp sạc MagSafe)",
+        "Cổng sạc": "USB-C, Hỗ trợ sạc MagSafe & sạc Apple Watch",
+        "Kháng nước": "Chuẩn IP54 chống bụi & nước"
+      }
+    },
+    {
+      "id": "ct-009",
+      "name": "Chuột không dây Logitech MX Master 3S",
+      "category": "accessory",
+      "categoryName": "Phụ kiện cao cấp",
+      "brand": "Logitech",
+      "price": 2290000,
+      "oldPrice": 2690000,
+      "discount": 15,
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 240,
+      "inStock": true,
+      "stockCount": 55,
+      "isFeatured": false,
+      "isFlashSale": false,
+      "badge": "Văn phòng đỉnh cao",
+      "colors": ["Graphite Đen Xám", "Pale Grey Trắng"],
+      "storageOptions": ["Bản Quốc Tế"],
+      "description": "Chuột công thái học biểu tượng cho lập trình viên và nhà sáng tạo nội dung. Cảm biến 8K DPI di chuyển mượt trên mọi bề mặt kể cả kính, cuộn siêu tốc MagSpeed và click siêu tĩnh Quiet Clicks.",
+      "specs": {
+        "Cảm biến": "Darkfield 8.000 DPI (lướt tốt trên mặt kính)",
+        "Con lăn": "MagSpeed điện từ cuộn 1000 dòng/giây",
+        "Kết nối": "Bluetooth Low Energy & Đầu thu Logi Bolt (3 thiết bị cùng lúc)",
+        "Pin": "Dùng 70 ngày sau một lần sạc đầy, sạc nhanh 1 phút dùng 3 giờ"
+      }
+    },
+    {
+      "id": "ct-010",
+      "name": "Bàn phím cơ Custom Keychron Q1 Pro Wireless",
+      "category": "accessory",
+      "categoryName": "Phụ kiện cao cấp",
+      "brand": "Keychron",
+      "price": 4690000,
+      "oldPrice": 5190000,
+      "discount": 10,
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 89,
+      "inStock": true,
+      "stockCount": 20,
+      "isFeatured": true,
+      "isFlashSale": false,
+      "badge": "Custom CNC Nhôm",
+      "colors": ["Carbon Black (Đen)", "Silver Grey (Bạc)", "Shell White (Trắng)"],
+      "storageOptions": ["Red Switch (Êm)", "Brown Switch (Khấc)", "Banana Switch"],
+      "description": "Bàn phím cơ layout 75% vỏ nhôm CNC nguyên khối anodized cao cấp, cấu trúc Double-Gasket êm tai, kết nối Bluetooth 5.1 đa thiết bị, hỗ trợ QMK/VIA tùy biến toàn diện mọi phím bấm.",
+      "specs": {
+        "Vỏ case": "Nhôm nguyên khối CNC 6063",
+        "Layout": "75% kèm núm xoay đa năng (Knob)",
+        "Switch": "Keychron K Pro Switches (Hotswap 3-pin & 5-pin)",
+        "Keycap": "KSA profile PBT Double-shot chống bóng",
+        "Kết nối": "Không dây Bluetooth 5.1 + Có dây Type-C"
+      }
+    },
+    {
+      "id": "ct-011",
+      "name": "Màn hình Dell UltraSharp 32 4K USB-C Hub (U3223QE)",
+      "category": "accessory",
+      "categoryName": "Phụ kiện cao cấp",
+      "brand": "Dell",
+      "price": 19490000,
+      "oldPrice": 21990000,
+      "discount": 11,
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.8,
+      "reviewsCount": 47,
+      "inStock": true,
+      "stockCount": 14,
+      "isFeatured": false,
+      "isFlashSale": false,
+      "badge": "Đồ Họa Chuẩn Màu",
+      "colors": ["Platinum Silver"],
+      "storageOptions": ["32 inch 4K UHD"],
+      "description": "Tấm nền IPS Black đột phá với độ tương phản 2000:1, độ phủ màu 98% DCI-P3 chuẩn điện ảnh. Cổng USB-C Hub cấp nguồn tới 90W và cổng LAN RJ45 biến màn hình thành trạm kết nối thông minh.",
+      "specs": {
+        "Kích thước": "31.5 inch IPS Black Technology (3840 x 2160) 4K UHD",
+        "Tương phản": "2000:1 (sâu gấp đôi IPS truyền thống)",
+        "Màu sắc": "1.07 tỷ màu, 100% sRGB, 98% DCI-P3, Delta E < 2",
+        "Cổng kết nối": "USB-C (90W PD), HDMI 2.0, DisplayPort 1.4, USB-A Hub, RJ45"
+      }
+    },
+    {
+      "id": "ct-012",
+      "name": "Củ sạc nhanh Anker Prime 100W GaN 3 Cổng",
+      "category": "accessory",
+      "categoryName": "Phụ kiện cao cấp",
+      "brand": "Anker",
+      "price": 1490000,
+      "oldPrice": 1890000,
+      "discount": 21,
+      "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=80"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 178,
+      "inStock": true,
+      "stockCount": 110,
+      "isFeatured": false,
+      "isFlashSale": true,
+      "badge": "GaNPrime Siêu Nhỏ",
+      "colors": ["Đen Xước Sang Trọng"],
+      "storageOptions": ["100W 3 Cổng (2C1A)"],
+      "description": "Công nghệ GaN thế hệ mới nhỏ hơn 43% so với sạc 96W thông thường, cung cấp công suất 100W tối đa đủ sạc cùng lúc MacBook Pro, iPhone và Apple Watch an toàn với ActiveShield 2.0.",
+      "specs": {
+        "Công suất": "Tối đa 100W Power Delivery 3.0",
+        "Cổng xuất": "2x USB-C (100W max) + 1x USB-A (22.5W)",
+        "Công nghệ": "GaNPrime + Phân bổ nguồn điện động PowerIQ 4.0",
+        "Bảo vệ": "ActiveShield 2.0 đo nhiệt độ 3.000.000 lần mỗi ngày"
+      }
+    }
+  ]
 }

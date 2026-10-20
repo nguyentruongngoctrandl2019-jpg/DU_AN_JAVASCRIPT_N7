@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hệ Thống Quản Trị Cửa Hàng | CT Tech Store Admin</title>
+  <meta name="description"
+    content="Giao diện quản trị CT Tech Store: Cập nhật sản phẩm, thay đổi trạng thái đơn hàng, theo dõi doanh thu và xuất hóa đơn." />
+  <!-- Google Fonts & Styles -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="bg-slate-100 text-slate-900 antialiased min-h-screen flex flex-col">
+
+  <!-- Admin Topbar -->
+  <header class="bg-slate-950 text-white border-b border-slate-800 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+      <div class="flex items-center gap-3">
+        <a href="/index.html" class="flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 font-black flex items-center justify-center text-sm shadow">CT</span>
+          <span class="text-base font-black tracking-tight">CT TECH ADMIN</span>
+        </a>
+        <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-slate-800 text-[10px] text-amber-400 font-mono">Bảng
+          Điều Khiển Quản Lý</span>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs">
+        <a href="/index.html"
+          class="px-3 py-1.5 rounded-lg border border-slate-700 hover:bg-slate-800 text-slate-300 transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+          Xem Cửa Hàng
+        </a>
+        <div class="flex items-center gap-2 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-xl">
+          <div
+            class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-xs">
+            AD</div>
+          <span class="font-bold text-white hidden sm:inline">Admin Quản Trị</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-8">
+
+    <!-- KPI Stats Strip -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-1">
+        <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Tổng Doanh Thu</span>
+        <div id="admin-stat-revenue" class="text-2xl font-black text-blue-600 tabular-nums">0 ₫</div>
+        <p class="text-[11px] text-emerald-600 font-medium">✓ Đã đối soát thanh toán an toàn</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-1">
+        <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Tổng Đơn Hàng</span>
+        <div id="admin-stat-orders" class="text-2xl font-black text-slate-900 tabular-nums">0</div>
+        <p class="text-[11px] text-slate-400">Đơn đã đặt và đang luân chuyển</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-1">
+        <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Sản Phẩm Trong Kho</span>
+        <div id="admin-stat-products" class="text-2xl font-black text-slate-900 tabular-nums">0</div>
+        <p class="text-[11px] text-slate-400">Thiết bị công nghệ catalog</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-1">
+        <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Khách Hàng Thành Viên</span>
+        <div id="admin-stat-users" class="text-2xl font-black text-purple-600 tabular-nums">0</div>
+        <p class="text-[11px] text-slate-400">Tài khoản đăng ký hệ thống</p>
+      </div>
+
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="flex border-b border-slate-200 gap-6 text-sm font-bold bg-white px-6 pt-4 rounded-t-2xl shadow-sm">
+      <button id="admin-tab-btn-products" onclick="switchAdminTab('products')"
+        class="pb-4 text-blue-600 border-b-2 border-blue-600 transition-colors flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+        </svg>
+        Quản Lý Sản Phẩm (CRUD)
+      </button>
+      <button id="admin-tab-btn-orders" onclick="switchAdminTab('orders')"
+        class="pb-4 text-slate-500 hover:text-slate-800 border-b-2 border-transparent transition-colors flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+          </path>
+        </svg>
+        Quản Lý Đơn Hàng & Cập Nhật Trạng Thái
+      </button>
+      <button id="admin-tab-btn-data" onclick="switchAdminTab('data')"
+        class="pb-4 text-slate-500 hover:text-slate-800 border-b-2 border-transparent transition-colors flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+          </path>
+        </svg>
+        Sao Lưu & Dữ Liệu Gốc
+      </button>
+    </div>
+
+    <!-- TAB 1: PRODUCT MANAGEMENT -->
+    <section id="admin-tab-products"
+      class="bg-white rounded-b-2xl border border-t-0 border-slate-200/80 p-6 shadow-sm space-y-6">
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-base font-black text-slate-900 tracking-tight">Danh Sách Thiết Bị Công Nghệ</h2>
+          <p class="text-xs text-slate-500">Thêm, sửa giá, điều chỉnh tồn kho và xóa sản phẩm tức thời</p>
+        </div>
+
+        <button type="button" onclick="openProductModal()"
+          class="px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+          </svg>
+          Thêm sản phẩm mới
+        </button>
+      </div>
+
+      <!-- Product Table -->
+      <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase tracking-wider font-semibold">
+            <tr>
+              <th class="py-3 px-4">Sản phẩm</th>
+              <th class="py-3 px-4">Phân loại</th>
+              <th class="py-3 px-4">Thương hiệu</th>
+              <th class="py-3 px-4 text-right">Giá bán</th>
+              <th class="py-3 px-4 text-center">Tồn kho</th>
+              <th class="py-3 px-4 text-right">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="admin-products-table-body" class="divide-y divide-slate-100">
+            <!-- Rendered via JS -->
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <!-- TAB 2: ORDER MANAGEMENT -->
+    <section id="admin-tab-orders"
+      class="hidden bg-white rounded-b-2xl border border-t-0 border-slate-200/80 p-6 shadow-sm space-y-6">
+      <div>
+        <h2 class="text-base font-black text-slate-900 tracking-tight">Quản Lý & Cập Nhật Tiến Độ Giao Đơn Hàng</h2>
+        <p class="text-xs text-slate-500">Thay đổi trạng thái giao vận, kiểm tra thanh toán và in/xuất hóa đơn PDF cho
+          khách</p>
+      </div>
+
+      <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase tracking-wider font-semibold">
+            <tr>
+              <th class="py-3 px-4">Mã đơn</th>
+              <th class="py-3 px-4">Khách hàng & SĐT</th>
+              <th class="py-3 px-4">Thời gian</th>
+              <th class="py-3 px-4 text-right">Tổng tiền</th>
+              <th class="py-3 px-4">Thanh toán</th>
+              <th class="py-3 px-4">Trạng thái đơn hàng</th>
+              <th class="py-3 px-4 text-right">Hóa đơn</th>
+            </tr>
+          </thead>
+          <tbody id="admin-orders-table-body" class="divide-y divide-slate-100">
+            <!-- Rendered via JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 3: DATA RESET -->
+    <section id="admin-tab-data"
+      class="hidden bg-white rounded-b-2xl border border-t-0 border-slate-200/80 p-8 shadow-sm space-y-6 max-w-xl">
+      <h2 class="text-base font-black text-slate-900">Sao Lưu & Khôi Phục Dữ Liệu</h2>
+      <p class="text-xs text-slate-600 leading-relaxed">
+        Nếu bạn muốn đưa tất cả sản phẩm, đơn hàng và tài khoản về trạng thái ban đầu mặc định của CT Tech Store, hãy
+        bấm vào nút bên dưới:
+      </p>
+
+      <button type="button" onclick="handleResetData()"
+        class="px-5 py-3 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+          </path>
+        </svg>
+        Khôi phục dữ liệu ban đầu
+      </button>
+    </section>
+
+  </main>
+
+  <!-- PRODUCT MODAL: ADD / EDIT -->
+  <div id="product-modal"
+    class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 overflow-y-auto hidden">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-8 shadow-2xl relative space-y-6 my-8">
+
+      <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+        <h3 id="modal-product-title" class="text-lg font-black text-slate-900">Thêm Sản Phẩm Mới</h3>
+        <button onclick="closeProductModal()" class="text-slate-400 hover:text-slate-600 text-xl font-bold">✕</button>
+      </div>
+
+      <form id="product-form" class="space-y-4 text-xs">
+        <input type="hidden" id="prod-id" />
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Tên sản phẩm công nghệ <span
+              class="text-red-500">*</span></label>
+          <input type="text" id="prod-name" required placeholder="Ví dụ: iPhone 16 Pro Max 256GB"
+            class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs text-slate-900" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Danh mục</label>
+            <select id="prod-category" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs">
+              <option value="phone">Điện thoại</option>
+              <option value="laptop">Laptop & MacBook</option>
+              <option value="tablet">Máy tính bảng</option>
+              <option value="smartwatch">Đồng hồ thông minh</option>
+              <option value="audio">Âm thanh & Tai nghe</option>
+              <option value="accessory">Phụ kiện cao cấp</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Thương hiệu</label>
+            <input type="text" id="prod-brand" required placeholder="Apple, Sony, Samsung..."
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Giá bán (VND) <span class="text-red-500">*</span></label>
+            <input type="number" id="prod-price" required placeholder="34990000"
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-mono" />
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Giá cũ niêm yết</label>
+            <input type="number" id="prod-old-price" placeholder="37990000"
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-mono" />
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Số lượng tồn kho</label>
+            <input type="number" id="prod-stock" value="25"
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-mono" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Link Ảnh Sản Phẩm (URL)</label>
+          <input type="url" id="prod-image" required placeholder="https://..."
+            class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Mô tả tóm tắt</label>
+          <textarea id="prod-desc" rows="3" placeholder="Đặc điểm nổi bật của máy..."
+            class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs"></textarea>
+        </div>
+
+        <div class="flex justify-end gap-3 pt-3 border-t border-slate-100">
+          <button type="button" onclick="closeProductModal()"
+            class="px-4 py-2 border border-slate-300 rounded-xl font-semibold hover:bg-slate-50">Hủy</button>
+          <button type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-md">Lưu sản
+            phẩm</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await CTTech.initDatabase();
+
+      renderAdminStats();
+      renderAdminProducts();
+      renderAdminOrders();
+
+      // Product Form Submit
+      document.getElementById('product-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const id = document.getElementById('prod-id').value;
+        const name = document.getElementById('prod-name').value.trim();
+        const category = document.getElementById('prod-category').value;
+        const brand = document.getElementById('prod-brand').value.trim();
+        const price = Number(document.getElementById('prod-price').value);
+        const oldPrice = Number(document.getElementById('prod-old-price').value) || (price + 2000000);
+        const stockCount = Number(document.getElementById('prod-stock').value) || 20;
+        const image = document.getElementById('prod-image').value.trim();
+        const description = document.getElementById('prod-desc').value.trim();
+
+        const catNames = {
+          phone: 'Điện thoại',
+          laptop: 'Laptop & MacBook',
+          tablet: 'Máy tính bảng',
+          smartwatch: 'Đồng hồ thông minh',
+          audio: 'Âm thanh & Tai nghe',
+          accessory: 'Phụ kiện cao cấp'
+        };
+
+        const productPayload = {
+          id: id || undefined,
+          name,
+          category,
+          categoryName: catNames[category] || 'Công nghệ',
+          brand,
+          price,
+          oldPrice,
+          discount: Math.round(((oldPrice - price) / oldPrice) * 100),
+          image,
+          images: [image],
+          stockCount,
+          inStock: stockCount > 0,
+          rating: 4.9,
+          reviewsCount: 15,
+          description
+        };
+
+        CTTech.saveProduct(productPayload);
+        CTTech.showToast('Đã lưu thông tin sản phẩm thành công!', 'success');
+        closeProductModal();
+        renderAdminStats();
+        renderAdminProducts();
+      });
+    });
+
+    function renderAdminStats() {
+      const products = CTTech.getProducts();
+      const orders = CTTech.getAllOrders();
+      const users = CTTech.getUsers();
+
+      const totalRevenue = orders.reduce((sum, o) => sum + (o.total || 0), 0);
+
+      document.getElementById('admin-stat-revenue').textContent = CTTech.formatVND(totalRevenue);
+      document.getElementById('admin-stat-orders').textContent = orders.length;
+      document.getElementById('admin-stat-products').textContent = products.length;
+      document.getElementById('admin-stat-users').textContent = users.length;
+    }
+
+    function renderAdminProducts() {
+      const products = CTTech.getProducts();
+      const tbody = document.getElementById('admin-products-table-body');
+
+      tbody.innerHTML = products.map(p => `
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-3">
+                <img src="${p.image}" alt="${p.name}" class="w-10 h-10 object-contain rounded-lg bg-slate-50 p-1 border border-slate-200 shrink-0" />
+                <div>
+                  <h4 class="font-bold text-slate-900 line-clamp-1">${p.name}</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">${p.id}</span>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-4 text-slate-600 font-medium">${p.categoryName}</td>
+            <td class="py-3 px-4 font-bold text-slate-800">${p.brand}</td>
+            <td class="py-3 px-4 text-right font-black text-blue-600 tabular-nums">${CTTech.formatVND(p.price)}</td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-bold ${p.stockCount > 5 ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-600'}">
+                ${p.stockCount || 0}
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right space-x-2">
+              <button onclick="editProduct('${p.id}')" class="px-2.5 py-1 text-xs font-semibold text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">Sửa</button>
+              <button onclick="deleteProduct('${p.id}')" class="px-2.5 py-1 text-xs font-semibold text-red-600 hover:bg-red-50 rounded-lg transition-colors">Xóa</button>
+            </td>
+          </tr>
+        `).join('');
+    }
+
+    function renderAdminOrders() {
+      const orders = CTTech.getAllOrders();
+      const tbody = document.getElementById('admin-orders-table-body');
+
+      tbody.innerHTML = orders.map(order => `
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="py-3 px-4 font-mono font-bold text-blue-600">#${order.id}</td>
+            <td class="py-3 px-4">
+              <strong class="text-slate-900 block">${order.customer.name}</strong>
+              <span class="text-slate-400 text-[11px]">${order.customer.phone}</span>
+            </td>
+            <td class="py-3 px-4 text-slate-500">${CTTech.formatDate(order.date)}</td>
+            <td class="py-3 px-4 text-right font-black text-slate-900 tabular-nums">${CTTech.formatVND(order.total)}</td>
+            <td class="py-3 px-4">
+              <span class="text-[11px] font-medium text-slate-700 block">${order.paymentMethodLabel}</span>
+              <span class="text-[10px] font-semibold text-emerald-600">${order.paymentStatus}</span>
+            </td>
+            <td class="py-3 px-4">
+              <select onchange="handleStatusChange('${order.id}', this.value)" class="bg-slate-50 border border-slate-300 rounded-lg px-2 py-1 text-xs font-medium focus:outline-none focus:border-blue-500">
+                <option value="Chờ xử lý" ${order.orderStatus === 'Chờ xử lý' ? 'selected' : ''}>Chờ xử lý</option>
+                <option value="Đang chuẩn bị hàng" ${order.orderStatus === 'Đang chuẩn bị hàng' ? 'selected' : ''}>Đang chuẩn bị hàng</option>
+                <option value="Đang giao hàng" ${order.orderStatus === 'Đang giao hàng' ? 'selected' : ''}>Đang giao hàng</option>
+                <option value="Hoàn thành" ${order.orderStatus === 'Hoàn thành' ? 'selected' : ''}>Hoàn thành</option>
+                <option value="Đã hủy" ${order.orderStatus === 'Đã hủy' ? 'selected' : ''}>Đã hủy</option>
+              </select>
+            </td>
+            <td class="py-3 px-4 text-right space-x-1">
+              <button onclick="CTTech.printReceipt('${order.id}')" title="In hóa đơn" class="p-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-600">
+                🖨️
+              </button>
+              <button onclick="CTTech.exportPDF('${order.id}')" title="Tải PDF" class="p-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-600 font-bold">
+                PDF
+              </button>
+            </td>
+          </tr>
+        `).join('');
+    }
+
+    window.handleStatusChange = (orderId, newStatus) => {
+      CTTech.updateOrderStatus(orderId, newStatus);
+      renderAdminStats();
+      renderAdminOrders();
+    };
+
+    window.openProductModal = () => {
+      document.getElementById('modal-product-title').textContent = 'Thêm Sản Phẩm Công Nghệ Mới';
+      document.getElementById('prod-id').value = '';
+      document.getElementById('prod-name').value = '';
+      document.getElementById('prod-brand').value = '';
+      document.getElementById('prod-price').value = '';
+      document.getElementById('prod-old-price').value = '';
+      document.getElementById('prod-stock').value = '25';
+      document.getElementById('prod-image').value = 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&auto=format&fit=crop&q=80';
+      document.getElementById('prod-desc').value = '';
+      document.getElementById('product-modal').classList.remove('hidden');
+    };
+
+    window.editProduct = (id) => {
+      const p = CTTech.getProductById(id);
+      if (!p) return;
+      document.getElementById('modal-product-title').textContent = `Chỉnh Sửa: ${p.name}`;
+      document.getElementById('prod-id').value = p.id;
+      document.getElementById('prod-name').value = p.name;
+      document.getElementById('prod-category').value = p.category || 'phone';
+      document.getElementById('prod-brand').value = p.brand || '';
+      document.getElementById('prod-price').value = p.price || '';
+      document.getElementById('prod-old-price').value = p.oldPrice || '';
+      document.getElementById('prod-stock').value = p.stockCount || 20;
+      document.getElementById('prod-image').value = p.image || '';
+      document.getElementById('prod-desc').value = p.description || '';
+      document.getElementById('product-modal').classList.remove('hidden');
+    };
+
+    window.deleteProduct = (id) => {
+      if (confirm('Bạn có chắc chắn muốn xóa sản phẩm này khỏi hệ thống?')) {
+        CTTech.deleteProduct(id);
+        CTTech.showToast('Đã xóa sản phẩm thành công', 'info');
+        renderAdminStats();
+        renderAdminProducts();
+      }
+    };
+
+    window.closeProductModal = () => {
+      document.getElementById('product-modal').classList.add('hidden');
+    };
+
+    window.handleResetData = async () => {
+      if (confirm('Thao tác này sẽ khôi phục danh sách sản phẩm và đơn hàng mẫu ban đầu. Tiếp tục?')) {
+        await CTTech.resetDemoData();
+        renderAdminStats();
+        renderAdminProducts();
+        renderAdminOrders();
+      }
+    };
+
+    window.switchAdminTab = (tab) => {
+      ['products', 'orders', 'data'].forEach(t => {
+        const btn = document.getElementById(`admin-tab-btn-${t}`);
+        const content = document.getElementById(`admin-tab-${t}`);
+        if (t === tab) {
+          btn.classList.add('text-blue-600', 'border-blue-600');
+          btn.classList.remove('text-slate-500', 'border-transparent');
+          content.classList.remove('hidden');
+        } else {
+          btn.classList.remove('text-blue-600', 'border-blue-600');
+          btn.classList.add('text-slate-500', 'border-transparent');
+          content.classList.add('hidden');
+        }
+      });
+    };
+  </script>
+</body>
+
+</html>

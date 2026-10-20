@@ -1,6 +1,6 @@
 {
-  "name": "UniStore - Giao Diện E-Commerce HTML & Tailwind",
-  "description": "Giao diện website thương mại điện tử đa trang thuần HTML và Tailwind CSS cho sinh viên, không JavaScript, chuẩn responsive với sidebar đồng nhất.",
+  "name": "CT Tech Store",
+  "description": "Trang web thương mại điện tử công nghệ cao cấp CT Tech Store - Mua sắm điện thoại, laptop, thiết bị thông minh, thanh toán bảo mật, in xuất hóa đơn PDF và hệ thống quản trị chuyên nghiệp.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
