@@ -61,6 +61,11 @@
         "Pin & Sạc": "4.685 mAh, Sạc nhanh 30W, MagSafe 25W",
         "Hệ điều hành": "iOS 18 (Hỗ trợ Apple Intelligence)",
         "Trọng lượng": "227g"
+      },
+      "storageImages": {
+        "256GB": ["/images/ct-001/256gb-1.jpg", "/images/ct-001/256gb-2.jpg", "/images/ct-001/256gb-3.jpg"],
+        "512GB": ["/images/ct-001/512gb-1.jpg", "/images/ct-001/512gb-2.jpg", "/images/ct-001/512gb-3.jpg"],
+        "1TB": ["/images/ct-001/1tb-1.jpg", "/images/ct-001/1tb-2.jpg", "/images/ct-001/1tb-3.jpg"]
       }
     },
     {
@@ -95,6 +100,11 @@
         "Cổng kết nối": "3x Thunderbolt 4, HDMI, SDXC, MagSafe 3",
         "Thời lượng pin": "Lên tới 22 giờ phát video",
         "Trọng lượng": "2.16 kg"
+      },
+      "storageImages": {
+        "36GB / 512GB": ["/images/ct-002/36gb-512gb-1.jpg", "/images/ct-002/36gb-512gb-2.jpg", "/images/ct-002/36gb-512gb-3.jpg"],
+        "48GB / 1TB": ["/images/ct-002/48gb-1tb-1.jpg", "/images/ct-002/48gb-1tb-2.jpg", "/images/ct-002/48gb-1tb-3.jpg"],
+        "128GB / 2TB": ["/images/ct-002/128gb-2tb-1.jpg", "/images/ct-002/128gb-2tb-2.jpg", "/images/ct-002/128gb-2tb-3.jpg"]
       }
     },
     {
@@ -128,6 +138,11 @@
         "Camera sau": "200MP Chính + 50MP Periscope 5x + 12MP Ultra-wide + 10MP 3x",
         "Pin & Sạc": "5.000 mAh, Sạc siêu nhanh 45W",
         "Tính năng": "Tích hợp Bút S-Pen, Kháng nước IP68, Trí tuệ Galaxy AI"
+      },
+      "storageImages": {
+        "256GB": ["/images/ct-003/256gb-1.jpg", "/images/ct-003/256gb-2.jpg", "/images/ct-003/256gb-3.jpg"],
+        "512GB": ["/images/ct-003/512gb-1.jpg", "/images/ct-003/512gb-2.jpg", "/images/ct-003/512gb-3.jpg"],
+        "1TB": ["/images/ct-003/1tb-1.jpg", "/images/ct-003/1tb-2.jpg", "/images/ct-003/1tb-3.jpg"]
       }
     },
     {
@@ -160,6 +175,9 @@
         "Bộ giải mã âm thanh": "LDAC, AAC, SBC (Hi-Res Audio Wireless)",
         "Kết nối": "Bluetooth 5.2 đa điểm, Jack 3.5mm",
         "Trọng lượng": "250g siêu nhẹ êm ái"
+      },
+      "storageImages": {
+        "Bản Tiêu Chuẩn": ["/images/ct-004/ban-tieu-chuan-1.jpg", "/images/ct-004/ban-tieu-chuan-2.jpg", "/images/ct-004/ban-tieu-chuan-3.jpg"]
       }
     },
     {
@@ -191,6 +209,11 @@
         "Hỗ trợ phụ kiện": "Apple Pencil Pro, Magic Keyboard 2024",
         "Độ dày": "5.1 mm",
         "Trọng lượng": "579g"
+      },
+      "storageImages": {
+        "256GB": ["/images/ct-005/256gb-1.jpg", "/images/ct-005/256gb-2.jpg", "/images/ct-005/256gb-3.jpg"],
+        "512GB": ["/images/ct-005/512gb-1.jpg", "/images/ct-005/512gb-2.jpg", "/images/ct-005/512gb-3.jpg"],
+        "1TB": ["/images/ct-005/1tb-1.jpg", "/images/ct-005/1tb-2.jpg", "/images/ct-005/1tb-3.jpg"]
       }
     },
     {
@@ -222,6 +245,9 @@
         "Kháng nước": "WR100 (lặn sâu đến 40 mét theo chuẩn EN13319)",
         "Pin": "36 giờ sử dụng thông thường, 72 giờ tiết kiệm pin",
         "Tính năng": "Còi báo động 86dB, ECG điện tâm đồ, SpO2, Cảm biến nhiệt độ"
+      },
+      "storageImages": {
+        "49mm GPS + Cellular 64GB": ["/images/ct-006/49mm-gps-cellular-64gb-1.jpg", "/images/ct-006/49mm-gps-cellular-64gb-2.jpg", "/images/ct-006/49mm-gps-cellular-64gb-3.jpg"]
       }
     },
     {
@@ -253,6 +279,9 @@
         "GPU": "NVIDIA GeForce RTX 4080 12GB GDDR6 (115W TGP)",
         "RAM & SSD": "32GB LPDDR5X 7467MHz + 1TB PCIe 4.0 NVMe",
         "Độ mỏng": "1.49 cm, trọng lượng 1.85 kg"
+      },
+      "storageImages": {
+        "32GB RAM / 1TB SSD": ["/images/ct-007/32gb-ram-1tb-ssd-1.jpg", "/images/ct-007/32gb-ram-1tb-ssd-2.jpg", "/images/ct-007/32gb-ram-1tb-ssd-3.jpg"]
       }
     },
     {
@@ -284,6 +313,9 @@
         "Pin": "6 giờ (1 lần sạc), 30 giờ (kèm hộp sạc MagSafe)",
         "Cổng sạc": "USB-C, Hỗ trợ sạc MagSafe & sạc Apple Watch",
         "Kháng nước": "Chuẩn IP54 chống bụi & nước"
+      },
+      "storageImages": {
+        "Hộp sạc MagSafe USB-C": ["/images/ct-008/hop-sac-magsafe-usb-c-1.jpg", "/images/ct-008/hop-sac-magsafe-usb-c-2.jpg", "/images/ct-008/hop-sac-magsafe-usb-c-3.jpg"]
       }
     },
     {
@@ -314,6 +346,9 @@
         "Con lăn": "MagSpeed điện từ cuộn 1000 dòng/giây",
         "Kết nối": "Bluetooth Low Energy & Đầu thu Logi Bolt (3 thiết bị cùng lúc)",
         "Pin": "Dùng 70 ngày sau một lần sạc đầy, sạc nhanh 1 phút dùng 3 giờ"
+      },
+      "storageImages": {
+        "Bản Quốc Tế": ["/images/ct-009/ban-quoc-te-1.jpg", "/images/ct-009/ban-quoc-te-2.jpg", "/images/ct-009/ban-quoc-te-3.jpg"]
       }
     },
     {
@@ -345,6 +380,11 @@
         "Switch": "Keychron K Pro Switches (Hotswap 3-pin & 5-pin)",
         "Keycap": "KSA profile PBT Double-shot chống bóng",
         "Kết nối": "Không dây Bluetooth 5.1 + Có dây Type-C"
+      },
+      "storageImages": {
+        "Red Switch (Êm)": ["/images/ct-010/red-switch-em-1.jpg", "/images/ct-010/red-switch-em-2.jpg", "/images/ct-010/red-switch-em-3.jpg"],
+        "Brown Switch (Khấc)": ["/images/ct-010/brown-switch-khac-1.jpg", "/images/ct-010/brown-switch-khac-2.jpg", "/images/ct-010/brown-switch-khac-3.jpg"],
+        "Banana Switch": ["/images/ct-010/banana-switch-1.jpg", "/images/ct-010/banana-switch-2.jpg", "/images/ct-010/banana-switch-3.jpg"]
       }
     },
     {
@@ -375,6 +415,9 @@
         "Tương phản": "2000:1 (sâu gấp đôi IPS truyền thống)",
         "Màu sắc": "1.07 tỷ màu, 100% sRGB, 98% DCI-P3, Delta E < 2",
         "Cổng kết nối": "USB-C (90W PD), HDMI 2.0, DisplayPort 1.4, USB-A Hub, RJ45"
+      },
+      "storageImages": {
+        "32 inch 4K UHD": ["/images/ct-011/32-inch-4k-uhd-1.jpg", "/images/ct-011/32-inch-4k-uhd-2.jpg", "/images/ct-011/32-inch-4k-uhd-3.jpg"]
       }
     },
     {
@@ -405,6 +448,9 @@
         "Cổng xuất": "2x USB-C (100W max) + 1x USB-A (22.5W)",
         "Công nghệ": "GaNPrime + Phân bổ nguồn điện động PowerIQ 4.0",
         "Bảo vệ": "ActiveShield 2.0 đo nhiệt độ 3.000.000 lần mỗi ngày"
+      },
+      "storageImages": {
+        "100W 3 Cổng (2C1A)": ["/images/ct-012/100w-3-cong-2c1a-1.jpg", "/images/ct-012/100w-3-cong-2c1a-2.jpg", "/images/ct-012/100w-3-cong-2c1a-3.jpg"]
       }
     }
   ]

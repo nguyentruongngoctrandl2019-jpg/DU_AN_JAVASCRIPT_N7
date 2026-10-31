@@ -91,6 +91,7 @@
     let selectedColor = '';
     let selectedStorage = '';
     let selectedQuantity = 1;
+    let lastPicked = 'storage'; // lựa chọn bấm sau cùng: 'color' hoặc 'storage'
 
     document.addEventListener('DOMContentLoaded', async () => {
       await CTTech.initDatabase();
@@ -130,7 +131,14 @@
       const p = currentProduct;
       const container = document.getElementById('product-detail-view');
 
-      const galleryImages = p.images && p.images.length > 0 ? p.images : [p.image];
+      // Ảnh theo bộ nhớ (storageImages) và theo màu (colorImages).
+      // Nếu cả hai đều có thì lựa chọn bấm sau cùng sẽ được ưu tiên.
+      const storageImgs = p.storageImages && p.storageImages[selectedStorage];
+      const colorImgs = p.colorImages && p.colorImages[selectedColor];
+      const candidates = lastPicked === 'color' ? [colorImgs, storageImgs] : [storageImgs, colorImgs];
+      const picked = candidates.find(list => list && list.length > 0);
+      const galleryImages = picked || (p.images && p.images.length > 0 ? p.images : [p.image]);
+      const fallbackImg = (p.images && p.images[0]) || p.image;
 
       container.innerHTML = `
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -138,7 +146,7 @@
             <!-- Left: Gallery Showcase -->
             <div class="lg:col-span-6 space-y-4">
               <div class="aspect-4/3 rounded-2xl overflow-hidden bg-white border border-slate-200 p-4 shadow-sm flex items-center justify-center">
-                <img id="main-product-image" src="${galleryImages[0]}" alt="${p.name}" class="max-h-full max-w-full object-contain transition-all duration-300" />
+                <img id="main-product-image" src="${galleryImages[0]}" alt="${p.name}" onerror="this.onerror=null;this.src='${fallbackImg}'" class="max-h-full max-w-full object-contain transition-all duration-300" />
               </div>
               
               <!-- Thumbnails -->
@@ -146,10 +154,10 @@
                 ${galleryImages.map((img, idx) => `
                   <button 
                     type="button" 
-                    onclick="changeMainImage('${img}')" 
+                    onclick="changeMainImage('${img}', ${idx})" 
                     class="w-20 h-20 rounded-xl bg-white border-2 overflow-hidden shrink-0 hover:border-blue-500 transition-all p-1 ${idx === 0 ? 'border-blue-600' : 'border-slate-200'}"
                   >
-                    <img src="${img}" alt="${p.name}" class="w-full h-full object-cover rounded-lg" />
+                    <img src="${img}" alt="${p.name}" onerror="this.onerror=null;this.src='${fallbackImg}'" class="w-full h-full object-cover rounded-lg" />
                   </button>
                 `).join('')}
               </div>
@@ -263,7 +271,7 @@
                   <label class="text-xs font-bold text-slate-900 uppercase tracking-wider">Số lượng:</label>
                   <div class="flex items-center border border-slate-300 rounded-xl bg-white overflow-hidden shadow-sm">
                     <button type="button" onclick="changeQty(-1)" class="px-3.5 py-1.5 text-slate-600 hover:bg-slate-100 font-bold text-sm">-</button>
-                    <span id="qty-display" class="px-4 py-1.5 text-xs font-mono font-bold text-slate-900 select-none">1</span>
+                    <span id="qty-display" class="px-4 py-1.5 text-xs font-mono font-bold text-slate-900 select-none">${selectedQuantity}</span>
                     <button type="button" onclick="changeQty(1)" class="px-3.5 py-1.5 text-slate-600 hover:bg-slate-100 font-bold text-sm">+</button>
                   </div>
                 </div>
@@ -354,13 +362,19 @@
         `;
     }
 
-    window.changeMainImage = (url) => {
+    window.changeMainImage = (url, idx = 0) => {
       const img = document.getElementById('main-product-image');
       if (img) img.src = url;
+      // đổi viền thumbnail đang chọn
+      document.querySelectorAll('#product-detail-view button[onclick^="changeMainImage"]').forEach((b, i) => {
+        b.classList.toggle('border-blue-600', i === idx);
+        b.classList.toggle('border-slate-200', i !== idx);
+      });
     };
 
     window.selectColor = (color) => {
       selectedColor = color;
+      lastPicked = 'color';
       const lbl = document.getElementById('selected-color-label');
       if (lbl) lbl.textContent = color;
       renderProductDetail();
@@ -368,6 +382,7 @@
 
     window.selectStorage = (storage) => {
       selectedStorage = storage;
+      lastPicked = 'storage';
       const lbl = document.getElementById('selected-storage-label');
       if (lbl) lbl.textContent = storage;
       renderProductDetail();
